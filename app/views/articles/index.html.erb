@@ -27,7 +27,7 @@
 
 <hr />
 <% @objects.each do |item| %>
-	<%= link_to item.content, item['href'] %>
+	<%= link_to item.content, item['href'], :target => "_blank" %>
 	<br />
 <% end %>
 
