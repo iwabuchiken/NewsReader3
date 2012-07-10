@@ -18,7 +18,7 @@ g a .
 
 git log --grep=master -6
 
-[Set up 20120529_173711]----------------------------
+[Set up 2012052]----------------------------
 rails new NewsReader
 
 cd NewsReader
@@ -37,7 +37,7 @@ bundle install
 
 rails s --port 3001
 
-[Git 20120529_174048]
+[Git ]
 ### CREATE REPO AT GitHub	###
 
 git init
@@ -52,8 +52,13 @@ g p origin master
 
 ### BROWSE GitHub	###
 
-[heroku 20120529_174501]
+[heroku ]
 gem install heroku --no-ri --no-rdoc
+
+# Successfully installed excon-0.14.3
+# Successfully installed heroku-api-0.2.7
+# Successfully installed heroku-2.28.10
+# 3 gems installed
 
 heroku keys:add
 
@@ -64,17 +69,20 @@ heroku rename cosmos-news-reader-3
 g p heroku master
 
 /git remote rm heroku
+/gem uninstall heroku (2.28.10)
 
 /git remote add heroku git@heroku.com:cosmos-english-reader.git
 
 heroku open
 
-[/Set up 20120529_173711]----------------------------
+[/Set up ]----------------------------
 
-[Model 20120608_092826]-------------------------------
-rails generate scaffold Article hl:text src:string link:string
+[Model: Article: 20120710_172354]-------------------------------
+rails generate scaffold Article line:text url:string src:string news_time:string genre:string cat:string subcat:string tag:string memo:text
 
 bundle exec rake db:migrate
+
+
 
 bundle update
 
@@ -86,7 +94,7 @@ r s
 []---------------------------
 heroku run rake db:migrate
 
-[20120629_064952]---------------------------
+[]---------------------------
 rails generate scaffold Genre name:string
 bundle exec rake db:migrate
 
@@ -103,13 +111,13 @@ bundle exec rake db:migrate
 
 heroku run rake db:migrate
 
-[20120630_065521]---------------------------
+[]---------------------------
 rails generate scaffold Keyword words:string genre_id:integer category_id:integer subcat_id:integer
 bundle exec rake db:migrate
 
 heroku run rake db:migrate
 
-[20120707_135220]---------------------------
+[]---------------------------
 #*bundle update
 
 ============EOF============

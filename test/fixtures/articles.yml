@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  line: MyText
+  url: MyString
+  src: MyString
+  news_time: MyString
+  genre: MyString
+  cat: MyString
+  subcat: MyString
+  tag: MyString
+  memo: MyText
+
+two:
+  line: MyText
+  url: MyString
+  src: MyString
+  news_time: MyString
+  genre: MyString
+  cat: MyString
+  subcat: MyString
+  tag: MyString
+  memo: MyText

@@ -1,0 +1,11 @@
+<h1>Listing articles</h1>
+
+<% if @objects != nil %>
+	@objects => <%= @objects.length %>
+<% else %>
+	@objects => nil
+<% end %>
+
+<br />
+
+<%= link_to 'New Article', new_article_path %>

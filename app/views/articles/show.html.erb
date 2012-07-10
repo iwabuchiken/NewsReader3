@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Line:</b>
+  <%= @article.line %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @article.url %>
+</p>
+
+<p>
+  <b>Src:</b>
+  <%= @article.src %>
+</p>
+
+<p>
+  <b>News time:</b>
+  <%= @article.news_time %>
+</p>
+
+<p>
+  <b>Genre:</b>
+  <%= @article.genre %>
+</p>
+
+<p>
+  <b>Cat:</b>
+  <%= @article.cat %>
+</p>
+
+<p>
+  <b>Subcat:</b>
+  <%= @article.subcat %>
+</p>
+
+<p>
+  <b>Tag:</b>
+  <%= @article.tag %>
+</p>
+
+<p>
+  <b>Memo:</b>
+  <%= @article.memo %>
+</p>
+
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>

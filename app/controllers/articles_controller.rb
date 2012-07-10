@@ -1,0 +1,782 @@
+#coding:utf-8
+
+require 'nokogiri'
+require 'open-uri'
+
+
+class ArticlesController < ApplicationController
+  # GET /articles
+  # GET /articles.json
+  def index
+        @objects = try_1    # Categorize => "Society"
+        
+  end
+
+  # GET /articles/1
+  # GET /articles/1.json
+  def show
+    @article = Article.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @article }
+    end
+  end
+
+  # GET /articles/new
+  # GET /articles/new.json
+  def new
+    @article = Article.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @article }
+    end
+  end
+
+  # GET /articles/1/edit
+  def edit
+    @article = Article.find(params[:id])
+  end
+
+  # POST /articles
+  # POST /articles.json
+  def create
+    @article = Article.new(params[:article])
+
+    respond_to do |format|
+      if @article.save
+        format.html { redirect_to @article, notice: 'Article was successfully created.' }
+        format.json { render json: @article, status: :created, location: @article }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @article.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PUT /articles/1
+  # PUT /articles/1.json
+  def update
+    @article = Article.find(params[:id])
+
+    respond_to do |format|
+      if @article.update_attributes(params[:article])
+        format.html { redirect_to @article, notice: 'Article was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @article.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /articles/1
+  # DELETE /articles/1.json
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+
+    respond_to do |format|
+      format.html { redirect_to articles_url }
+      format.json { head :no_content }
+    end
+  end
+  
+  private #==========================================
+    # ============ try_1 => From: try_nokogiri_17 ========================
+	def get_atags(docs)
+#    # Get doc
+#    docs = get_docs(5)
+#    
+#    #meta_tags
+#    meta_tags = nil
+#    
+#    # New docs
+#    docs_new = []
+
+    # href a tags
+    a_tags_href = []
+    
+    # Modify
+    docs.each do |doc|
+      #--------------------
+      # Modify 'a' tags
+      #--------------------
+      
+      # Get 'a' tags
+      a_tags = doc.css("div ul li a")
+      
+      # href value
+      a_tags.each do |a_tag|
+        if a_tag['href'].start_with?("/hl?")
+          # Modify url
+          a_tag['href'] = "http://headlines.yahoo.co.jp" + a_tag['href']
+          
+          # Add
+          a_tags_href.push(a_tag)
+          
+        end#if a_tag['href'].start_with?("/hl?")
+      end#a_tags.each do |a_tag|
+      
+#      # New doc
+#      docs_new.push(a_tags_href)
+      
+      #--------------------
+      # Modify 'charset' value
+      #--------------------
+      
+    end#docs.each do |doc|
+
+    # Return
+    return a_tags_href
+    
+  end#def get_atags
+
+  def get_docs(number)
+        # Get params
+    genre = params['genre']
+    
+    # Urls
+    if genre != nil
+      # url = "http://headlines.yahoo.co.jp/hl?c=soci&t=l&p="
+      url = "http://headlines.yahoo.co.jp/hl?c=#{genre}&t=l&p="
+    else
+      url = "http://headlines.yahoo.co.jp/hl?c=soci&t=l&p="
+    end
+    
+    # HTML docs
+    docs = []
+    
+    # Thread array
+    threads = []
+    
+    # Get docs
+    # 2.times do |i|
+    number.times do |i|
+      # Get docs
+      threads << Thread.start(i, url) do
+        # puts "Thred #{i.to_s}: " + urls[i] 
+        # docs[i] = Nokogiri::HTML(open(urls[i]))
+        docs[i] = Nokogiri::HTML(open(url + (i + 1).to_s))
+      end
+    
+      # Join
+      threads.each do |t|
+        t.join
+      end
+    end
+    
+    # Return
+    return docs
+
+  end#def get_docs(number)
+
+    
+  def categorize_try17_others(a_tags)
+    #######################
+    # Steps
+    # 1. 
+    
+    
+    #######################
+    # 1.
+    cat_usa = []; cat_china = [];
+    cat_europe = []; cat_others = [];
+    
+    # 
+    a_tags_categorized = []
+    
+    #
+    #kw_usa = ["アメリカ", "米国", "米"] 
+    kw_usa = ["アメリカ", "米国", "米"]
+    # kw_usa = [u"アメリカ", u"米国", u"米"]gs.each do |a_tag|
+    
+    kw_china = ["中国"]
+    
+    kw_europe = ["ヨーロッパ", "欧州", "フランス", "ドイツ", "イギリス", "欧", "EU", "ギリシャ"]
+    
+    #
+    a_tags.each do |a_tag|
+      # Flag
+      is_in = false
+      
+      #
+      kw_usa.each do |word|
+        #
+        if a_tag.content.include?(word)
+          cat_usa.push(a_tag)
+          
+          #
+          is_in = true
+          break
+          
+        end#if a_tag.content.include?(word)
+          
+      end#kw_usa.each do |word|
+        # else
+
+      #
+      kw_china.each do |word|
+        #
+        if a_tag.content.include?(word)
+          cat_china.push(a_tag)
+          
+          #
+          is_in = true
+          break
+          
+        end#if a_tag.content.include?(word)
+          
+      end#kw_usa.each do |word|
+
+      #
+      kw_europe.each do |word|
+        #
+        if a_tag.content.include?(word)
+          cat_europe.push(a_tag)
+          
+          #
+          is_in = true
+          break
+          
+        end#if a_tag.content.include?(word)
+          
+      end#kw_europe.each do |word|
+
+      #
+      if is_in == false
+        cat_others.push(a_tag)
+      end#if is_in == false
+          
+        # end#if a_tag.content.include?(word)
+      # end#kw_usa.each do |word|
+    end#a_tags.each do |a_tag|
+      
+    # Return
+    return [cat_usa, cat_china, cat_europe, cat_others]    
+  end#def categorize_try17_others(a_tags)
+
+  def categorize_try17_bus(a_tags)
+    #######################
+    # Steps
+    # 1. Categories
+    # 2. Key words
+    # 3. Array of arrays
+    # 4. a_tags_categorized
+    # 5. Categorize
+    # 6. Return
+    #######################
+    
+    #######################
+    # 1. Categories
+    #######################
+    cat_usa = []; cat_china_taiwan = []; cat_europe = []
+    cat_tax = []; cat_nuc_plants = []; cat_enterprises = [];
+    cat_economy = []; cat_others = []
+    
+    # #
+    # cats = [cat_usa, cat_china_taiwan, cat_europe,
+            # cat_tax, cat_nuc_plants, cat_enterprises,
+            # cat_economy, cat_others]
+    
+    #######################
+    # 2. Key words
+    #######################
+    #
+    kw_usa = [
+            # Country
+            "アメリカ", "米国", "米",
+            
+            # Cities
+            "ニューヨーク",
+            
+            ] 
+    #kw_nuc_plants = ["原発", "原子力", "原子力発電所"]
+    # kw_usa = [u"アメリカ", u"米国", u"米"]gs.each do |a_tag|
+    
+    kw_china_taiwan = ["中国", "台湾"]
+    
+    kw_europe = [
+            # Countries
+            "フランス", "ドイツ", "イギリス", "ギリシャ", "ロシア", "イタリア",
+            "スペイン", "ポルトガル", "キプロス",
+            "独", "仏", "英", "伊", "露",
+            
+            # Cities
+            "ベルリン", "パリ", "ロンドン", "モスクワ",
+            
+            # Regions
+            "欧", "欧州", "ヨーロッパ", "EU", "ユーロ", "西欧", "東欧", "北欧" 
+            ]
+    
+    kw_tax = ["税", "税金", "消費税", "脱税"]
+    
+    kw_nuc_plants = ["原発", "原子力", "原子力発電所", "東電", "東京電力", "関電"]
+    
+    kw_enterprises = [
+                  "企業", "会社",
+                  
+                  # Companies
+                  "ソニー", "パナ", "パナソニック", "シャープ", "日興證券", 
+                  "日興", "東レ",
+                  
+                  # Others
+                  "社内", "社外",
+                  ]
+    
+    kw_economy = [
+                # Macro
+                "経済", "景気", "所得", "国民",
+                
+                # Industries
+                "エネルギー", "石油", "再生",
+                ]
+    
+    
+    #######################
+    # 3. Array of arrays
+    #######################
+    # Key words
+    kws = [kw_usa, kw_china_taiwan, kw_europe,
+            kw_tax, kw_nuc_plants, kw_enterprises, kw_economy]
+            
+    # Categories
+        #
+    cats = [cat_usa, cat_china_taiwan, cat_europe,
+            cat_tax, cat_nuc_plants, cat_enterprises,
+            cat_economy, cat_others]
+
+    #######################
+    # 4. a_tags_categorized
+    #######################
+    a_tags_categorized = []
+    
+
+    #######################
+    # 5. Categorize
+    #######################
+    #
+    a_tags.each do |a_tag|
+      # Flag
+      is_in = false
+
+      #
+      kws.length.times do |i|
+        #
+        kws[i].each do |word|
+          #
+          if a_tag.content.include?(word)
+            cats[i].push(a_tag)
+            
+            #
+            is_in = true
+            
+            break
+          
+          end#if a_tag.content.include?(word)
+          
+        end#kws[i].each do |word|
+        
+      end#kws.length.times do |i|
+
+      if is_in == false
+        cat_others.push(a_tag)
+      end#if is_in == false
+      
+    end#a_tags.each do |a_tag|
+    
+    #######################
+    # 6. Return
+    #######################
+    return cats
+    
+    # return [cat_nuc_plants, cat_china_taiwan, 
+              # cat_tax, cat_osaka, cat_enterprises, 
+              # cat_incidents,cat_others]
+
+  end#def categorize_try17_bus(a_tags)
+
+  def categorize_try17_society(a_tags)
+    #######################
+    # Steps
+    # 1. 
+    
+    
+    #######################
+    # 1.
+    cat_nuc_plants = []; cat_china_taiwan = [];
+    cat_tax = []; cat_osaka = []; cat_enterprises = [];
+    cat_incidents = []; cat_others = []
+    
+    # 
+    a_tags_categorized = []
+    
+    #
+    #kw_usa = ["アメリカ", "米国", "米"] 
+    kw_nuc_plants = ["原発", "原子力", "原子力発電所"]
+    # kw_usa = [u"アメリカ", u"米国", u"米"]gs.each do |a_tag|
+    
+    kw_china_taiwan = ["中国", "台湾"]
+    
+    kw_tax = ["税", "税金", "消費税", "脱税"]
+    
+    kw_osaka = ["大阪", "橋下", "阪神", "関西"]
+    
+    kw_enterprises = ["企業", "会社", "ソニー", "パナ", 
+                      "パナソニック", "シャープ", "社内", "社外",
+                      "日興證券", "日興"]
+    
+    kw_incidents = ["逮捕", "事件", "犯罪", "犯", "罪", 
+                     "虐待", "暴行", "傷害", "遺棄"]
+    
+    #
+    a_tags.each do |a_tag|
+      # Flag
+      is_in = false
+      
+      #
+      kw_nuc_plants.each do |word|
+        #
+        if a_tag.content.include?(word)
+          cat_nuc_plants.push(a_tag)
+          
+          #
+          is_in = true
+          break
+          
+        end#if a_tag.content.include?(word)
+          
+      end#kw_nuc_plants.each do |word|
+
+      #
+      kw_china_taiwan.each do |word|
+        #
+        if a_tag.content.include?(word)
+          cat_china_taiwan.push(a_tag)
+          
+          #
+          is_in = true
+          break
+          
+        end#if a_tag.content.include?(word)
+          
+      end#kw_china_taiwan.each do |word|
+
+      #
+      kw_tax.each do |word|
+        #
+        if a_tag.content.include?(word)
+          cat_tax.push(a_tag)
+          
+          #
+          is_in = true
+          break
+          
+        end#if a_tag.content.include?(word)
+          
+      end#kw_tax.each do |word|
+
+      #
+      kw_osaka.each do |word|
+        #
+        if a_tag.content.include?(word)
+          cat_osaka.push(a_tag)
+          
+          #
+          is_in = true
+          break
+          
+        end#if a_tag.content.include?(word)
+          
+      end#kw_osaka.each do |word|
+
+      #
+      kw_enterprises.each do |word|
+        #
+        if a_tag.content.include?(word)
+          cat_enterprises.push(a_tag)
+          
+          #
+          is_in = true
+          break
+          
+        end#if a_tag.content.include?(word)
+          
+      end#kw_enterprises.each do |word|
+
+      #
+      kw_incidents.each do |word|
+        #
+        if a_tag.content.include?(word)
+          cat_incidents.push(a_tag)
+          
+          #
+          is_in = true
+          break
+          
+        end#if a_tag.content.include?(word)
+          
+      end#kw_incidents.each do |word|
+
+      #
+      if is_in == false
+        cat_others.push(a_tag)
+      end#if is_in == false
+          
+        # end#if a_tag.content.include?(word)
+      # end#kw_usa.each do |word|
+    end#a_tags.each do |a_tag|
+    
+    # Return
+    return [cat_nuc_plants, cat_china_taiwan, 
+              cat_tax, cat_osaka, cat_enterprises, 
+              cat_incidents,cat_others]
+
+  end#def categorize_try17_others(a_tags)
+  
+  def categorize_try17_overseas(a_tags)
+    #######################
+    # Steps
+    # 1. 
+    
+    
+    #######################
+    # 1.
+    cat_usa = []; cat_china = [];
+    cat_europe = []; cat_korea = [];
+    cat_me = []; cat_india = []
+    cat_others = [];
+    
+    # 
+    a_tags_categorized = []
+    
+    #
+    kw_usa = ["アメリカ", "米国", "米"] 
+    # kw_usa = [u"アメリカ", u"米国", u"米"]gs.each do |a_tag|
+    
+    kw_china = ["中国"]
+    
+    kw_europe = [
+            # Countries
+            "フランス", "ドイツ", "イギリス", "ギリシャ", "ロシア", "イタリア",
+            "独", "仏", "英", "伊", "露",
+            # Cities
+            "ベルリン", "パリ", "ロンドン", "モスクワ",
+            # Europe
+            "欧", "欧州", "ヨーロッパ", "EU", "ユーロ" 
+            ]
+    
+    kw_korea = [
+            # Countries, Regions
+            "韓国", "韓", "朝鮮",
+            # Cities
+            "ソウル", "ピョンヤン", "平城"
+            ]
+    
+    kw_me = ["中東", 
+              # Countries
+              "シリア", "ヨルダン", "イラク", "イラン", "エジプト",
+              "イスラエル",
+              # Groups
+              "ハマス"
+              ]
+    
+    kw_india = ["インド"]
+    
+    #
+    a_tags.each do |a_tag|
+      #=============================
+      # 1. USA
+      # 2. China
+      # 3. Europe
+      # 4. Korea
+      # 5. Middle East
+      # 6. India
+      # 0. Others
+      #=============================
+      # Flag
+      is_in = false
+      
+      #
+      kw_usa.each do |word|
+        #
+        if a_tag.content.include?(word)
+          cat_usa.push(a_tag)
+          
+          #
+          is_in = true
+          break
+          
+        end#if a_tag.content.include?(word)
+          
+      end#kw_usa.each do |word|
+        # else
+
+      #===================
+      # 2. China
+      #===================
+      kw_china.each do |word|
+        #
+        if a_tag.content.include?(word)
+          cat_china.push(a_tag)
+          
+          #
+          is_in = true
+          break
+          
+        end#if a_tag.content.include?(word)
+          
+      end#kw_usa.each do |word|
+
+      #===================
+      # 3. Europe
+      #===================
+      kw_europe.each do |word|
+        #
+        if a_tag.content.include?(word)
+          cat_europe.push(a_tag)
+          
+          #
+          is_in = true
+          break
+          
+        end#if a_tag.content.include?(word)
+          
+      end#kw_europe.each do |word|
+
+      #===================
+      # 4. Korea
+      #===================
+      kw_korea.each do |word|
+        #
+        if a_tag.content.include?(word)
+          cat_korea.push(a_tag)
+          
+          #
+          is_in = true
+          break
+          
+        end#if a_tag.content.include?(word)
+          
+      end#kw_europe.each do |word|
+
+      #===================
+      # 5. Middle East
+      #===================
+      kw_me.each do |word|
+        #
+        if a_tag.content.include?(word)
+          cat_me.push(a_tag)
+          
+          #
+          is_in = true
+          break
+          
+        end#if a_tag.content.include?(word)
+          
+      end#kw_europe.each do |word|
+
+      #===================
+      # 6. India
+      #===================
+      kw_india.each do |word|
+        #
+        if a_tag.content.include?(word) \
+            and not a_tag.content.include?("インドネシア")
+          cat_india.push(a_tag)
+          
+          #
+          is_in = true
+          break
+          
+        end#if a_tag.content.include?(word)
+          
+      end#kw_europe.each do |word|
+
+      #===================
+      # 
+      #===================
+      if is_in == false
+        cat_others.push(a_tag)
+      end#if is_in == false
+          
+        # end#if a_tag.content.include?(word)
+      # end#kw_usa.each do |word|
+    end#a_tags.each do |a_tag|
+      
+    # Return
+    return [cat_usa, cat_china, cat_europe, 
+              cat_korea, cat_me, cat_india,
+              cat_others]    
+  end#def categorize_overseas(a_tags)
+
+  def categorize_try17(a_tags)
+    #######################
+    # Steps
+    # 1. 
+    
+    
+    #######################
+    # Param
+    @genre = params['genre']
+
+    # Switching
+    if @genre == "int"
+      a_tags_categorized = categorize_try17_overseas(a_tags)
+    elsif @genre == "soci"
+      a_tags_categorized = categorize_try17_society(a_tags)
+    elsif @genre == "bus_all"
+      a_tags_categorized = categorize_try17_bus(a_tags)
+    else
+      a_tags_categorized = categorize_try17_others(a_tags)
+    end
+    
+    # Return
+    return a_tags_categorized
+    
+  end#def categorize_try17(a_tags)
+
+  def try_1
+    ###########################
+    # Steps
+    # 1. Get categories
+    # 2. Get docs
+    # 3. Get a_tags    
+    ###########################
+    
+    #=====================
+    # 1. Get categories
+    #=====================
+    # Param
+
+    # Switch
+    
+    #=====================
+    # 2. Get docs
+    #=====================
+    # Get doc
+    docs = get_docs(5)
+
+    #=====================
+    # 3. Get a_tags
+    #=====================
+    a_tags = get_atags(docs)
+    
+    
+    # Categorize
+    
+    # Return
+    # return a_tags
+    return a_tags
+    
+    #debug
+#    return meta_tags
+    
+#    
+    # return docs
+    # return docs_new
+    
+  end#def try_1
+
+end
