@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <b>Id:</b>
+  <%= @genre.id %>
+</p>
+
+<p>
   <b>Name:</b>
   <%= @genre.name %>
 </p>
@@ -11,4 +16,5 @@
 </p>
 
 <%= link_to 'Edit', edit_genre_path(@genre) %> |
-<%= link_to 'Back', genres_path %>
+<%= link_to 'Back', genres_path %>&nbsp;&nbsp;|&nbsp;
+<%= link_to 'Destroy', @genre, confirm: 'Are you sure?', method: :delete , :style => "color: red;" %>

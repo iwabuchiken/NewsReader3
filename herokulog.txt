@@ -1,0 +1,100 @@
+2012-07-10T22:41:45+00:00 app[web.1]: Started GET "/genres/new" for 101.111.248.97 at 2012-07-10 22:41:45 +0000
+2012-07-10T22:41:45+00:00 app[web.1]: 
+2012-07-10T22:41:45+00:00 app[web.1]: Processing by GenresController#new as HTML
+2012-07-10T22:41:45+00:00 app[web.1]:   Rendered genres/_form.html.erb (1.9ms)
+2012-07-10T22:41:45+00:00 app[web.1]:   Rendered genres/new.html.erb within layouts/admin (2.2ms)
+2012-07-10T22:41:45+00:00 app[web.1]: Completed 500 Internal Server Error in 3ms
+2012-07-10T22:41:45+00:00 app[web.1]: 
+2012-07-10T22:41:45+00:00 app[web.1]:     18: 
+2012-07-10T22:41:45+00:00 app[web.1]: ActionView::Template::Error (undefined method `code' for #<Genre id: nil, name: nil, created_at: nil, updated_at: nil>):
+2012-07-10T22:41:45+00:00 app[web.1]:     23: 
+2012-07-10T22:41:45+00:00 app[web.1]:     20:     <%= f.label :code %><br />
+2012-07-10T22:41:45+00:00 app[web.1]:     19:   <div class="field">
+2012-07-10T22:41:45+00:00 app[web.1]:     21:     <%= f.text_field :code %>
+2012-07-10T22:41:45+00:00 app[web.1]:     22:   </div>
+2012-07-10T22:41:45+00:00 app[web.1]:     24:   <div class="actions">
+2012-07-10T22:41:45+00:00 app[web.1]:   app/views/genres/_form.html.erb:1:in `_app_views_genres__form_html_erb___1185932221664825224_21221840'
+2012-07-10T22:41:45+00:00 app[web.1]:   app/views/genres/new.html.erb:3:in `_app_views_genres_new_html_erb__1227799738160644068_28337680'
+2012-07-10T22:41:45+00:00 app[web.1]:   app/views/genres/_form.html.erb:21:in `block in _app_views_genres__form_html_erb___1185932221664825224_21221840'
+2012-07-10T22:41:45+00:00 app[web.1]: 
+2012-07-10T22:41:45+00:00 app[web.1]: 
+2012-07-10T22:41:45+00:00 app[web.1]:   app/controllers/genres_controller.rb:33:in `new'
+2012-07-10T22:41:45+00:00 app[web.1]: cache: [GET /genres/new] miss
+2012-07-10T22:41:45+00:00 heroku[router]: GET cosmos-news-reader-3.herokuapp.com/genres/new dyno=web.1 queue=0 wait=0ms service=13ms status=500 bytes=643
+2012-07-10T22:43:04+00:00 app[web.1]: 
+2012-07-10T22:43:04+00:00 app[web.1]: 
+2012-07-10T22:43:04+00:00 app[web.1]: Started GET "/articles" for 101.111.248.97 at 2012-07-10 22:43:04 +0000
+2012-07-10T22:43:04+00:00 app[web.1]: Processing by ArticlesController#index as HTML
+2012-07-10T22:43:08+00:00 app[web.1]: Completed 200 OK in 4127ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+2012-07-10T22:43:08+00:00 app[web.1]:   Rendered articles/index.html.erb within layouts/application (7.2ms)
+2012-07-10T22:43:08+00:00 app[web.1]: cache: [GET /articles] miss
+2012-07-10T22:43:08+00:00 heroku[router]: GET cosmos-news-reader-3.herokuapp.com/articles dyno=web.1 queue=0 wait=0ms service=4170ms status=200 bytes=15189
+2012-07-10T22:43:08+00:00 app[web.1]: cache: [GET /assets/application-0149f820dbdd285aa65e241569d8c256.css] miss
+2012-07-10T22:43:08+00:00 heroku[router]: GET cosmos-news-reader-3.herokuapp.com/assets/application-0149f820dbdd285aa65e241569d8c256.css dyno=web.1 queue=0 wait=0ms service=5ms status=304 bytes=0
+2012-07-10T22:43:09+00:00 app[web.1]: cache: [GET /assets/application-c2533f9820f8544ccad34cc4ccac9ddf.js] miss
+2012-07-10T22:43:09+00:00 heroku[router]: GET cosmos-news-reader-3.herokuapp.com/assets/application-c2533f9820f8544ccad34cc4ccac9ddf.js dyno=web.1 queue=0 wait=0ms service=6ms status=304 bytes=0
+2012-07-10T22:43:09+00:00 app[web.1]: cache: [GET /favicon.ico] miss
+2012-07-10T22:43:09+00:00 heroku[router]: GET cosmos-news-reader-3.herokuapp.com/favicon.ico dyno=web.1 queue=0 wait=0ms service=5ms status=304 bytes=0
+2012-07-10T22:43:11+00:00 app[web.1]: 
+2012-07-10T22:43:11+00:00 app[web.1]: 
+2012-07-10T22:43:11+00:00 app[web.1]: Started GET "/genres" for 101.111.248.97 at 2012-07-10 22:43:11 +0000
+2012-07-10T22:43:11+00:00 app[web.1]: Processing by GenresController#index as HTML
+2012-07-10T22:43:11+00:00 app[web.1]:   Rendered genres/index.html.erb within layouts/admin (0.4ms)
+2012-07-10T22:43:11+00:00 heroku[router]: GET cosmos-news-reader-3.herokuapp.com/genres dyno=web.1 queue=0 wait=0ms service=175ms status=304 bytes=0
+2012-07-10T22:43:11+00:00 app[web.1]: Completed 200 OK in 53ms (Views: 9.8ms | ActiveRecord: 27.7ms)
+2012-07-10T22:43:11+00:00 app[web.1]: cache: [GET /genres] miss
+2012-07-10T22:43:13+00:00 app[web.1]: 
+2012-07-10T22:43:13+00:00 app[web.1]: 
+2012-07-10T22:43:13+00:00 app[web.1]: Started GET "/genres/new" for 101.111.248.97 at 2012-07-10 22:43:13 +0000
+2012-07-10T22:43:13+00:00 app[web.1]: Processing by GenresController#new as HTML
+2012-07-10T22:43:13+00:00 app[web.1]:   Rendered genres/_form.html.erb (25.6ms)
+2012-07-10T22:43:13+00:00 app[web.1]:   Rendered genres/new.html.erb within layouts/admin (29.6ms)
+2012-07-10T22:43:13+00:00 app[web.1]: Completed 500 Internal Server Error in 32ms
+2012-07-10T22:43:13+00:00 app[web.1]:     18: 
+2012-07-10T22:43:13+00:00 app[web.1]: 
+2012-07-10T22:43:13+00:00 app[web.1]: ActionView::Template::Error (undefined method `code' for #<Genre id: nil, name: nil, created_at: nil, updated_at: nil>):
+2012-07-10T22:43:13+00:00 app[web.1]:     20:     <%= f.label :code %><br />
+2012-07-10T22:43:13+00:00 app[web.1]:     22:   </div>
+2012-07-10T22:43:13+00:00 app[web.1]:     19:   <div class="field">
+2012-07-10T22:43:13+00:00 app[web.1]:     23: 
+2012-07-10T22:43:13+00:00 app[web.1]:     21:     <%= f.text_field :code %>
+2012-07-10T22:43:13+00:00 app[web.1]:     24:   <div class="actions">
+2012-07-10T22:43:13+00:00 app[web.1]:   app/views/genres/_form.html.erb:21:in `block in _app_views_genres__form_html_erb___1185932221664825224_21221840'
+2012-07-10T22:43:13+00:00 app[web.1]:   app/views/genres/_form.html.erb:1:in `_app_views_genres__form_html_erb___1185932221664825224_21221840'
+2012-07-10T22:43:13+00:00 app[web.1]:   app/views/genres/new.html.erb:3:in `_app_views_genres_new_html_erb__1227799738160644068_28337680'
+2012-07-10T22:43:13+00:00 app[web.1]:   app/controllers/genres_controller.rb:33:in `new'
+2012-07-10T22:43:13+00:00 app[web.1]: 
+2012-07-10T22:43:13+00:00 app[web.1]: 
+2012-07-10T22:43:13+00:00 app[web.1]: cache: [GET /genres/new] miss
+2012-07-10T22:43:13+00:00 heroku[router]: GET cosmos-news-reader-3.herokuapp.com/genres/new dyno=web.1 queue=0 wait=0ms service=131ms status=500 bytes=643
+2012-07-10T22:43:59+00:00 heroku[run.1]: State changed from starting to up
+2012-07-10T22:43:59+00:00 heroku[run.1]: Awaiting client
+2012-07-10T22:43:59+00:00 heroku[run.1]: Starting process with command `bundle exec rake db:migrate`
+2012-07-10T22:44:06+00:00 heroku[run.1]: Process exited with status 0
+2012-07-10T22:44:06+00:00 heroku[run.1]: State changed from up to complete
+2012-07-10T22:44:15+00:00 app[web.1]: 
+2012-07-10T22:44:15+00:00 app[web.1]: 
+2012-07-10T22:44:15+00:00 app[web.1]:   Rendered genres/_form.html.erb (3.4ms)
+2012-07-10T22:44:15+00:00 app[web.1]: Started GET "/genres/new" for 101.111.248.97 at 2012-07-10 22:44:15 +0000
+2012-07-10T22:44:15+00:00 app[web.1]: Processing by GenresController#new as HTML
+2012-07-10T22:44:15+00:00 app[web.1]:   Rendered genres/new.html.erb within layouts/admin (3.6ms)
+2012-07-10T22:44:15+00:00 app[web.1]: Completed 500 Internal Server Error in 4ms
+2012-07-10T22:44:15+00:00 app[web.1]: ActionView::Template::Error (undefined method `code' for #<Genre id: nil, name: nil, created_at: nil, updated_at: nil>):
+2012-07-10T22:44:15+00:00 app[web.1]: 
+2012-07-10T22:44:15+00:00 app[web.1]:     18: 
+2012-07-10T22:44:15+00:00 app[web.1]:     22:   </div>
+2012-07-10T22:44:15+00:00 app[web.1]:     23: 
+2012-07-10T22:44:15+00:00 app[web.1]:     19:   <div class="field">
+2012-07-10T22:44:15+00:00 app[web.1]:     20:     <%= f.label :code %><br />
+2012-07-10T22:44:15+00:00 app[web.1]:   app/views/genres/_form.html.erb:1:in `_app_views_genres__form_html_erb___1185932221664825224_21221840'
+2012-07-10T22:44:15+00:00 app[web.1]:   app/views/genres/_form.html.erb:21:in `block in _app_views_genres__form_html_erb___1185932221664825224_21221840'
+2012-07-10T22:44:15+00:00 app[web.1]:     21:     <%= f.text_field :code %>
+2012-07-10T22:44:15+00:00 app[web.1]:   app/controllers/genres_controller.rb:33:in `new'
+2012-07-10T22:44:15+00:00 app[web.1]: 
+2012-07-10T22:44:15+00:00 app[web.1]: cache: [GET /genres/new] miss
+2012-07-10T22:44:15+00:00 app[web.1]:     24:   <div class="actions">
+2012-07-10T22:44:15+00:00 app[web.1]: 
+2012-07-10T22:44:15+00:00 app[web.1]:   app/views/genres/new.html.erb:3:in `_app_views_genres_new_html_erb__1227799738160644068_28337680'
+2012-07-10T22:44:15+00:00 heroku[router]: GET cosmos-news-reader-3.herokuapp.com/genres/new dyno=web.1 queue=0 wait=0ms service=50ms status=500 bytes=643
+2012-07-10T22:44:15+00:00 app[web.1]: cache: [GET /favicon.ico] miss
+2012-07-10T22:44:15+00:00 heroku[router]: GET cosmos-news-reader-3.herokuapp.com/favicon.ico dyno=web.1 queue=0 wait=0ms service=10ms status=304 bytes=0
