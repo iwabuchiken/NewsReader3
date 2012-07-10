@@ -78,10 +78,11 @@ heroku open
 [/Set up ]----------------------------
 
 [Model: Article: 20120710_172354]-------------------------------
-rails generate scaffold Article line:text url:string src:string news_time:string genre:string cat:string subcat:string tag:string memo:text
+# rails generate scaffold Article line:text url:string src:string news_time:string genre:string cat:string subcat:string tag:string memo:text
 
-bundle exec rake db:migrate
+# bundle exec rake db:migrate
 
+heroku run rake db:migrate
 
 
 bundle update

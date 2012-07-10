@@ -1,4 +1,23 @@
+<div>
+	<%= form_tag('#', :method => :get) do %>
+		読み込むページ数
+		<!-- 	REF => http://d.hatena.ne.jp/utadaq/20080506	 -->
+		<%= text_field_tag "doc_num", '', :size => '3' %>
+		<%= submit_tag "Go" %>
+		
+		現在のページ数: <%= @current_num %>
+		
+	<% end %>
+	
+</div>
+
 <h1>Listing articles</h1>
+
+<% if flash['message'] != nil %>
+	<%= flash['message'] %>
+<% end %>
+
+<br />
 
 <% if @objects != nil %>
 	@objects => <%= @objects.length %>

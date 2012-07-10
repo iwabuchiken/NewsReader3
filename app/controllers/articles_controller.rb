@@ -3,13 +3,41 @@
 require 'nokogiri'
 require 'open-uri'
 
+require 'basics'
+include BASICS
 
 class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-        @objects = try_1    # Categorize => "Society"
+      # @objects = try_1(doc_num)
+      
+      doc_num = params['doc_num']
+      
+      if doc_num == nil
+          number = 3
+      elsif doc_num != nil
+          if BASICS.is_numeric?(doc_num)
+              number = doc_num.to_i
+          elsif
+              flash['message'] = "Input is not an integer"
+              number = 3
+          end
         
+      end
+      
+      @objects = try_1(number)
+      
+      @current_num = number
+      # @objects = try_1()
+        
+      # # @result = BASICS.is_numeric?(111)
+      # @result = BASICS.is_numeric?(params['doc_num'])
+#       
+      # # flash['notice'] = @result.to_s
+      # flash['result'] = @result.to_s
+      # # @result = is_numeric?(111)
+      
   end
 
   # GET /articles/1
@@ -737,7 +765,7 @@ class ArticlesController < ApplicationController
     
   end#def categorize_try17(a_tags)
 
-  def try_1
+  def try_1(doc_num=3)
     ###########################
     # Steps
     # 1. Get categories
@@ -756,7 +784,8 @@ class ArticlesController < ApplicationController
     # 2. Get docs
     #=====================
     # Get doc
-    docs = get_docs(5)
+    # docs = get_docs(5)
+    docs = get_docs(doc_num)
 
     #=====================
     # 3. Get a_tags
