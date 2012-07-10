@@ -2,22 +2,34 @@
 	<%= form_tag('#', :method => :get) do %>
 		読み込むページ数
 		<!-- 	REF => http://d.hatena.ne.jp/utadaq/20080506	 -->
-		<%= text_field_tag "doc_num", '', :size => '3' %>
+		<%= text_field_tag "doc_num", @current_num || '', :size => '3' %>
 		<%= submit_tag "Go" %>
 		
-		<span style="background-color: blue; color: white">現在のページ数: </span><%= @current_num %>
+<!-- 		<span style="background-color: blue; color: white">現在のページ数: </span><%#= @current_num %> -->
 		<span style="background-color: green; color: white">
 			ジャンル：</span>
-			<% if @genre == "soci" %>
+			<select name="genre_name">
+				<% @genre_names.length.times do |i| %>
+					<option value="<%= i %>" 
+								<%= params['genre_name'] == i.to_s ? "selected" : '' %>>
+							<%= @genre_names[i] %>
+							
+					</option>
+				<!-- <option value="0" <%#= params['genre_name'] == "0" ? "selected" : '' %>>Society</option>
+				<option value="1" <%#= params['genre_name'] == "1" ? "selected" : '' %>>Overseas</option>
+				<option value="2" <%#= params['genre_name'] == "2" ? "selected" : '' %>>Economics</option> -->
+				<% end %>
+			</select>
+			<!-- <%# if @genre == "soci" %>
 				Society
-			<% elsif @genre == "int" %>
+			<%# elsif @genre == "int" %>
 				Overseas
-			<% elsif @genre == "bus_all" %>
+			<%# elsif @genre == "bus_all" %>
 				Economy
-			<% else %>
+			<%# else %>
 				Society
-			<% end %>
-
+			<%# end %> -->
+		</span>
 		<span style="background-color: green; color: white">
 			記事総数：</span>
 			
@@ -26,19 +38,38 @@
 			<% else %>
 				0
 			<% end %>
+		</span>
 		
-		
-	<% end %>
+	<% end %> <%#= form_tag('#', :method => :get) do %>
 	
 </div>
 
 
+<hr />
+<%= @params.keys %><br />
+
+<% if @params['genre_name'] != nil %>
+	@params['genre_name'] => <%= @params['genre_name'] %>
+<% else %>
+	@params['genre_name'] => nil
+<% end %>
+
+<br />
+<% keys = @genres.keys %>
+<% @genres.size.times do |i| %>
+	<%= link_to keys[i], :controller => "articles", :action => "index", :genre_name => @genres[keys[i]] %>
+	<% if i < @genres.size - 1 %>
+		|
+	<% end %> <%# if i < @genres.size - 1 %>
+<% end %> <%# @genres.size.times do |i| %>
+
+<hr />
 <% if flash['message'] != nil %>
 	<%= flash['message'] %>
 <% end %>
 
 
-<hr />
+<hr /> <!-- -------------------------------------------------- --> 
 <% @objects.each do |item| %>
 	<%= link_to item.content, item['href'], :target => "_blank" %>
 	<br />

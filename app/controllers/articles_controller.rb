@@ -49,6 +49,12 @@ class ArticlesController < ApplicationController
       @objects = try_1(number, @genre)
       
       @current_num = number
+      
+      @params = params
+      
+      @genre_names = ["Sociedty", "Overseas", "Economics"]
+      
+      @genres = {"Society" => "soci", "Overseas" => "int", "Economics" => "bus_all"}
       # @objects = try_1()
         
       # # @result = BASICS.is_numeric?(111)
