@@ -5,25 +5,38 @@
 		<%= text_field_tag "doc_num", '', :size => '3' %>
 		<%= submit_tag "Go" %>
 		
-		現在のページ数: <%= @current_num %>
+		<span style="background-color: blue; color: white">現在のページ数: </span><%= @current_num %>
+		<span style="background-color: green; color: white">
+			ジャンル：</span>
+			<% if @genre == "soci" %>
+				Society
+			<% elsif @genre == "int" %>
+				Overseas
+			<% elsif @genre == "bus_all" %>
+				Economy
+			<% else %>
+				Society
+			<% end %>
+
+		<span style="background-color: green; color: white">
+			記事総数：</span>
+			
+			<% if @objects != nil %>
+				<%= @objects.length %>
+			<% else %>
+				0
+			<% end %>
+		
 		
 	<% end %>
 	
 </div>
 
-<h1>Listing articles</h1>
 
 <% if flash['message'] != nil %>
 	<%= flash['message'] %>
 <% end %>
 
-<br />
-
-<% if @objects != nil %>
-	@objects => <%= @objects.length %>
-<% else %>
-	@objects => nil
-<% end %>
 
 <hr />
 <% @objects.each do |item| %>

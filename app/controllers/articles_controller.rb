@@ -10,6 +10,11 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
+      #------------------------------
+      # 1. Get number of docs
+      # 2. Set genre
+      # 3. Get objects
+      #------------------------------
       # @objects = try_1(doc_num)
       
       doc_num = params['doc_num']
@@ -26,7 +31,22 @@ class ArticlesController < ApplicationController
         
       end
       
-      @objects = try_1(number)
+      #----------------------
+      # 2. Set genre
+      #----------------------
+      p_genre = params['genre']
+      
+      if p_genre != nil
+        @genre = p_genre
+      else
+        @genre = "soci"
+      end
+      
+      #----------------------
+      # 3. Get objects
+      #----------------------
+      # @objects = try_1(number)
+      @objects = try_1(number, @genre)
       
       @current_num = number
       # @objects = try_1()
@@ -161,17 +181,19 @@ class ArticlesController < ApplicationController
     
   end#def get_atags
 
-  def get_docs(number)
+  def get_docs(number, genre="soci")
         # Get params
-    genre = params['genre']
+    # genre = params['genre']
     
     # Urls
-    if genre != nil
+    url = "http://headlines.yahoo.co.jp/hl?c=#{genre}&t=l&p="
+    
+    # if genre != nil
+      # # url = "http://headlines.yahoo.co.jp/hl?c=soci&t=l&p="
+      # url = "http://headlines.yahoo.co.jp/hl?c=#{genre}&t=l&p="
+    # else
       # url = "http://headlines.yahoo.co.jp/hl?c=soci&t=l&p="
-      url = "http://headlines.yahoo.co.jp/hl?c=#{genre}&t=l&p="
-    else
-      url = "http://headlines.yahoo.co.jp/hl?c=soci&t=l&p="
-    end
+    # end
     
     # HTML docs
     docs = []
@@ -765,7 +787,7 @@ class ArticlesController < ApplicationController
     
   end#def categorize_try17(a_tags)
 
-  def try_1(doc_num=3)
+  def try_1(doc_num=3, genre="soci")
     ###########################
     # Steps
     # 1. Get categories
@@ -785,7 +807,8 @@ class ArticlesController < ApplicationController
     #=====================
     # Get doc
     # docs = get_docs(5)
-    docs = get_docs(doc_num)
+    # docs = get_docs(doc_num)
+    docs = get_docs(doc_num, genre)
 
     #=====================
     # 3. Get a_tags
