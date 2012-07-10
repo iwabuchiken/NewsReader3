@@ -97,5 +97,23 @@ bundle exec rake db:migrate
 
 heroku run rake db:migrate
 
+=======================================================
+[Add column: Article 20120711_065652]-------------------------------
+# rails generate migration AddColumnCodesToArticle
+# 
+# bundle exec rake db:migrate
+# 
+# bundle exec rake db:rollback
+# 
+# rails destroy migration AddColumnCodesToArticle
+# 
+# rails generate migration AddColumnCodesToGenre
+
+*push
+
+heroku run rake db:migrate
+
+
+
 
 ============EOF============
