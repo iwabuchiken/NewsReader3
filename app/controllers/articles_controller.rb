@@ -64,7 +64,20 @@ class ArticlesController < ApplicationController
       
       @params = params
       
-      @genres = {"Society" => "soci", "Overseas" => "int", "Economics" => "bus_all"}
+      # @genres = {"Society" => "soci", "Overseas" => "int", "Economics" => "bus_all"}
+      
+      # @genres_src = Genre.all
+      genres_src = Genre.all
+      
+      @genres = {}
+      genres_src.each do |item|
+        @genres[item.name] = item.code
+      end
+      
+      # @genres_src2 = {}
+      # @genres_src.each do |item|
+        # @genres_src2[item.name] = item.code
+      # end#genres_src.each do |item|
       
       #----------------------
       # 4. Set session objects

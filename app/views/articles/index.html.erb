@@ -69,7 +69,6 @@ session[:genre] => <%= session[:genre] %>
 	<%= flash['message'] %>
 <% end %>
 
-
 <hr /> <!-- -------------------------------------------------- --> 
 <% @objects.each do |item| %>
 	<%= link_to item.content, item['href'], :target => "_blank" %>
