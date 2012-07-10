@@ -1,0 +1,115 @@
+a
+cd C:\WORKS\WORKSPACES_APTANA\NewsReader3
+a
+
+rails s --port 3000
+
+a
+cd C:\WORKS\WORKSPACES_APTANA\NewsReader3
+rails s --port 3000
+
+C:\WORKS\PROGRAMS\FreeMind\Freemind.exe C:\WORKS\WORKSPACES_ANDROID\FM\NewsReader3_R\NewsReader3.mm
+
+
+[Git]
+git init
+g a .
+
+
+git log --grep=master -6
+
+[Set up 20120529_173711]----------------------------
+rails new NewsReader
+
+cd NewsReader
+
+copy C:\WORKS\WORKSPACES_APTANA\ChineseReader\.project .
+
+### EDIT .project#name	###
+
+### IMPORT TO APTANA	###
+
+copy C:\WORKS\WORKSPACES_APTANA\ChineseReader\win_command_history.txt .
+
+copy C:\WORKS\WORKSPACES_APTANA\ChineseReader\Gemfile .
+
+bundle install
+
+rails s --port 3001
+
+[Git 20120529_174048]
+### CREATE REPO AT GitHub	###
+
+git init
+
+git add .
+
+git commit -a
+
+git remote add origin git@github.com:iwabuchiken/NewsReader3.git
+
+g p origin master
+
+### BROWSE GitHub	###
+
+[heroku 20120529_174501]
+gem install heroku --no-ri --no-rdoc
+
+heroku keys:add
+
+heroku create --stack cedar
+
+heroku rename cosmos-news-reader-3
+
+g p heroku master
+
+/git remote rm heroku
+
+/git remote add heroku git@heroku.com:cosmos-english-reader.git
+
+heroku open
+
+[/Set up 20120529_173711]----------------------------
+
+[Model 20120608_092826]-------------------------------
+rails generate scaffold Article hl:text src:string link:string
+
+bundle exec rake db:migrate
+
+bundle update
+
+[]---------------------------
+a
+cd C:\WORKS\WORKSPACES_APTANA\NewsReader_eclipse
+r s
+
+[]---------------------------
+heroku run rake db:migrate
+
+[20120629_064952]---------------------------
+rails generate scaffold Genre name:string
+bundle exec rake db:migrate
+
+rails destroy scaffold Genre
+
+rails generate scaffold Genre name:string
+bundle exec rake db:migrate
+
+rails generate scaffold Category name:string genre_id:integer
+bundle exec rake db:migrate
+
+rails generate scaffold Subcat name:string category_id:integer
+bundle exec rake db:migrate
+
+heroku run rake db:migrate
+
+[20120630_065521]---------------------------
+rails generate scaffold Keyword words:string genre_id:integer category_id:integer subcat_id:integer
+bundle exec rake db:migrate
+
+heroku run rake db:migrate
+
+[20120707_135220]---------------------------
+#*bundle update
+
+============EOF============
