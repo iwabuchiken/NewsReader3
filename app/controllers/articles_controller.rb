@@ -14,11 +14,19 @@ class ArticlesController < ApplicationController
       # 1. Get number of docs
       # 2. Set genre
       # 3. Get objects
+      # 4. Set session objects
       #------------------------------
       # @objects = try_1(doc_num)
       
-      doc_num = params['doc_num']
-      
+      if params['doc_num'] != nil
+        doc_num = params['doc_num']
+      elsif session[:doc_num] != nil
+        doc_num = session[:doc_num]
+      else
+        doc_num = nil
+      end
+        
+        
       if doc_num == nil
           number = 3
       elsif doc_num != nil
@@ -34,7 +42,11 @@ class ArticlesController < ApplicationController
       #----------------------
       # 2. Set genre
       #----------------------
-      p_genre = params['genre']
+      if params['genre']
+        p_genre = params['genre']
+      else
+        p_genre = session[:genre]
+      end
       
       if p_genre != nil
         @genre = p_genre
@@ -53,6 +65,16 @@ class ArticlesController < ApplicationController
       @params = params
       
       @genres = {"Society" => "soci", "Overseas" => "int", "Economics" => "bus_all"}
+      
+      #----------------------
+      # 4. Set session objects
+      #----------------------
+      # REF => 黒田・佐藤：322
+      session[:doc_num] = @current_num
+      
+      session[:genre] = @genre
+
+      
       # @objects = try_1()
         
       # # @result = BASICS.is_numeric?(111)

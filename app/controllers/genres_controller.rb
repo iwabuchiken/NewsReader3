@@ -1,9 +1,13 @@
 class GenresController < ApplicationController
+  
+  layout 'admin'
+  
   # GET /genres
   # GET /genres.json
   def index
     @genres = Genre.all
 
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @genres }
