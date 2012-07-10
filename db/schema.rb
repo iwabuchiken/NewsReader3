@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120710082347) do
+ActiveRecord::Schema.define(:version => 20120710152513) do
 
   create_table "articles", :force => true do |t|
     t.text     "line"
@@ -23,6 +23,12 @@ ActiveRecord::Schema.define(:version => 20120710082347) do
     t.string   "subcat"
     t.string   "tag"
     t.text     "memo"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "genres", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

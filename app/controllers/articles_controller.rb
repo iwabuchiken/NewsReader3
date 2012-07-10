@@ -52,8 +52,6 @@ class ArticlesController < ApplicationController
       
       @params = params
       
-      @genre_names = ["Sociedty", "Overseas", "Economics"]
-      
       @genres = {"Society" => "soci", "Overseas" => "int", "Economics" => "bus_all"}
       # @objects = try_1()
         

@@ -3,33 +3,25 @@
 		読み込むページ数
 		<!-- 	REF => http://d.hatena.ne.jp/utadaq/20080506	 -->
 		<%= text_field_tag "doc_num", @current_num || '', :size => '3' %>
-		<%= submit_tag "Go" %>
 		
-<!-- 		<span style="background-color: blue; color: white">現在のページ数: </span><%#= @current_num %> -->
 		<span style="background-color: green; color: white">
 			ジャンル：</span>
-			<select name="genre_name">
-				<% @genre_names.length.times do |i| %>
-					<option value="<%= i %>" 
-								<%= params['genre_name'] == i.to_s ? "selected" : '' %>>
-							<%= @genre_names[i] %>
+<!-- 			<select name="genre_name"> -->
+			<select name="genre">
+				<% @genres.length.times do |i| %>
+					<option value="<%= @genres[@genres.keys[i]] %>" 
+								<%#= params['genre_name'] == i.to_s ? "selected" : '' %>
+								<%= params['genre'] == @genres[@genres.keys[i]] ? "selected" : '' %>
+						>
+							<%= @genres.keys[i] %>
 							
 					</option>
-				<!-- <option value="0" <%#= params['genre_name'] == "0" ? "selected" : '' %>>Society</option>
-				<option value="1" <%#= params['genre_name'] == "1" ? "selected" : '' %>>Overseas</option>
-				<option value="2" <%#= params['genre_name'] == "2" ? "selected" : '' %>>Economics</option> -->
 				<% end %>
 			</select>
-			<!-- <%# if @genre == "soci" %>
-				Society
-			<%# elsif @genre == "int" %>
-				Overseas
-			<%# elsif @genre == "bus_all" %>
-				Economy
-			<%# else %>
-				Society
-			<%# end %> -->
 		</span>
+
+		<%= submit_tag "Go" %>
+
 		<span style="background-color: green; color: white">
 			記事総数：</span>
 			
@@ -55,15 +47,7 @@
 <% end %>
 
 <br />
-<% keys = @genres.keys %>
-<% @genres.size.times do |i| %>
-	<%= link_to keys[i], :controller => "articles", :action => "index", :genre_name => @genres[keys[i]] %>
-	<% if i < @genres.size - 1 %>
-		|
-	<% end %> <%# if i < @genres.size - 1 %>
-<% end %> <%# @genres.size.times do |i| %>
 
-<hr />
 <% if flash['message'] != nil %>
 	<%= flash['message'] %>
 <% end %>
@@ -75,8 +59,4 @@
 	<br />
 <% end %>
 
-<!-- @objects[0].class => <%#= @objects[0].class %> -->
-<br>
-<%#= link_to @objects[0].content, @objects[0]['href'] %>
 <hr />
-<%= link_to 'New Article', new_article_path %>

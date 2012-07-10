@@ -1,5 +1,7 @@
 NewsReader3::Application.routes.draw do
   
+  resources :genres
+
   resources :articles
 
   # root
