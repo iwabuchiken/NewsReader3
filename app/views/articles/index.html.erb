@@ -25,6 +25,14 @@
 	@objects => nil
 <% end %>
 
-<br />
+<hr />
+<% @objects.each do |item| %>
+	<%= link_to item.content, item['href'] %>
+	<br />
+<% end %>
 
+<!-- @objects[0].class => <%#= @objects[0].class %> -->
+<br>
+<%#= link_to @objects[0].content, @objects[0]['href'] %>
+<hr />
 <%= link_to 'New Article', new_article_path %>
