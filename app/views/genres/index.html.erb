@@ -21,4 +21,13 @@
 <%= link_to 'New Genre', new_genre_path %>
 
 <hr />
-session[:doc_num] => <%= session[:doc_num] %>
+
+<dl class="accordion">
+	<dt>
+		<span style="color: green">Admin data</span>
+	</dt>
+	
+	<dd>
+		session[:doc_num] => <%= session[:doc_num] %>
+	</dd>
+</dl>

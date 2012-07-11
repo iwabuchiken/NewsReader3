@@ -5,6 +5,21 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  
+  <script type="text/javascript">
+		$(function() {
+			$('dl.accordion>dd').hide();
+			$('dl.accordion>dt.opened').nextUntil('dl.accordion>dt').show();
+			$('dl.accordion>dt').click(function(e) {
+				$(this).toggleClass('opened');
+				// $(this).nextUntil('dl.accordion>dt').toggle('fast');
+				$(this).nextUntil('dl.accordion>dt').toggle();
+			});
+			
+			
+		});		
+	</script>
+	
 </head>
 <body>
 
