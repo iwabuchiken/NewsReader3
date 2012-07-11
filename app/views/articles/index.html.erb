@@ -38,7 +38,7 @@
 		</span>
 		
 		|
-		<%= link_to "Admin", genres_path %>
+		<%= link_to "Admin", genres_path, :class => "a_blue" %>
 		
 	<% end %> <%#= form_tag('#', :method => :get) do %>
 	
@@ -46,28 +46,39 @@
 
 
 <hr />
-<%= @params.keys %><br />
 
-<% if @params['genre'] != nil %>
-	@params['genre'] => <%= @params['genre'] %>
-<% else %>
-	@params['genre'] => nil
-<% end %>
+<dl class="accordion">
+	<dt>
+		<span style="color: green">Admin data</span>
+	</dt>
+	
+	<dd>
+		<%= @params.keys %><br />
+		
+		<% if @params['genre'] != nil %>
+			@params['genre'] => <%= @params['genre'] %>
+		<% else %>
+			@params['genre'] => nil
+		<% end %>
+		<br />
 
-<br />
-
-@genre => <%= @genre %>
-<br />
-
-session[:doc_num] => <%= session[:doc_num] %>
-<br />
-
-session[:genre] => <%= session[:genre] %>
-<br />
-
-<% if flash['message'] != nil %>
-	<%= flash['message'] %>
-<% end %>
+		@genre => <%= @genre %>
+		<br />
+		
+		@genres => <%= @genres %>
+		<br />
+		
+		session[:doc_num] => <%= session[:doc_num] %>
+		<br />
+		
+		session[:genre] => <%= session[:genre] %>
+		<br />
+		
+		<% if flash['message'] != nil %>
+			<%= flash['message'] %>
+		<% end %>	
+	</dd>
+</dl>
 
 <hr /> <!-- -------------------------------------------------- --> 
 <% @objects.each do |item| %>
