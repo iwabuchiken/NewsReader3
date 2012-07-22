@@ -81,8 +81,15 @@
 </dl>
 
 <hr /> <!-- -------------------------------------------------- --> 
-<% @objects.each do |item| %>
-	<%= link_to item.content, item['href'], :target => "_blank" %>
+<% @objects.each_with_index do |item, i| %>
+	<%= i %>. <%= link_to item.content, item['href'], :target => "_blank" %>
+	
+	<% if i != 0 and i % 10 == 0 %>
+	
+		<hr />
+	
+	<% end %>
+	
 	<br />
 <% end %>
 
