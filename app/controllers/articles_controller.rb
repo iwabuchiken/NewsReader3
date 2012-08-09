@@ -14,10 +14,15 @@ class ArticlesController < ApplicationController
       # 1. Get number of docs
       # 2. Set genre
       # 3. Get objects
+      # 3-2. Set "@genres"
+      
       # 4. Set session objects
       #------------------------------
       # @objects = try_1(doc_num)
       
+      #------------------------------
+      # 1. Get number of docs
+      #------------------------------
       if params['doc_num'] != nil
         doc_num = params['doc_num']
       elsif session[:doc_num] != nil
@@ -57,13 +62,29 @@ class ArticlesController < ApplicationController
       #----------------------
       # 3. Get objects
       #----------------------
+      #//----------- try_2 -----------------
       # @objects = try_1(number)
-      @objects = try_1(number, @genre)
+      @objects = try_2(number, @genre)
       
       @current_num = number
       
       @params = params
       
+      @category_names = ["abc", "def"]
+      
+      
+      # #//----------- try_1 -----------------
+      # # @objects = try_1(number)
+      # @objects = try_1(number, @genre)
+#       
+      # @current_num = number
+#       
+      # @params = params
+      
+      
+      #----------------------
+      # 3-2. Set "@genres"
+      #----------------------
       # @genres = {"Society" => "soci", "Overseas" => "int", "Economics" => "bus_all"}
       
       # @genres_src = Genre.all
@@ -869,5 +890,59 @@ class ArticlesController < ApplicationController
     # return docs_new
     
   end#def try_1
+
+  #--------- try_2 --------------------------------------------
+  def categorize(a_tags)
+      #==========================
+      # Steps
+      # 1. 
+      
+      #==========================
+      len = a_tags.size
+      
+      return [a_tags[0..(len/2)], a_tags[(len/2)..len]]
+      
+    
+  end#def categorize(a_tags)
+  
+  def try_2(doc_num=3, genre="soci")
+    ###########################
+    # Steps
+    # 1. Get categories
+    # 2. Get docs
+    # 3. Get a_tags
+    # 4. Categorize
+    # 9. Return tags     
+    ###########################
+    
+    #=====================
+    # 1. Get categories
+    #=====================
+    # Param
+
+    # Switch
+    
+    #=====================
+    # 2. Get docs
+    #=====================
+    docs = get_docs(doc_num, genre)
+
+    #=====================
+    # 3. Get a_tags
+    #=====================
+    a_tags = get_atags(docs)
+
+    #----------------------    
+    # 4. Categorize
+    #----------------------
+    categories = categorize(a_tags)
+    
+    #----------------------
+    # 9. Return tags
+    #----------------------
+    return categories
+    # return a_tags
+    
+  end#def try_2
 
 end

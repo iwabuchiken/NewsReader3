@@ -1,3 +1,5 @@
+<!-- REF=> http://penguin-web.dyndns.org/mountain/blogs/358 -->
+
 <%= render "index_header" %>
 
 <hr />
@@ -6,6 +8,36 @@
 
 <hr /> <!-- -------------------------------------------------- -->
  
-<%= render :partial => "index_objects_loop" %>
+<% @objects.each_with_index do |cats, j| %>
+	
+	<span style="color: blue;">
+		<%= @category_names[j] %>
+	</span>
+	<hr />
+	<% cats.each_with_index do |item, i| %>
+	
+		<%#= i %> 
+		<%= i + 1 %>.
+		<%= link_to item.content, item['href'], :target => "_blank" %><br />
+	
+		<%# if i != 0 and i % 10 == 0 %>
+		<% if (i < 12 and i > 8 and i % 9 == 0) or
+				(i >= 12 and i % 10 == 0) 
+				%>
+		
+			<hr />
+		<%# elsif i % 10 == 0 %>
+		
+			<hr />
+		
+		<% end %>
+
+	
+	<% end %>
+	
+	end<hr />
+
+<% end %>
 
 <hr />
+@objects.size: <%= @objects.size %>
