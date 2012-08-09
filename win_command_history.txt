@@ -1,14 +1,12 @@
 a
 cd C:\WORKS\WORKSPACES_APTANA\NewsReader3
-a
-
-rails s --port 3000
-
-a
-cd C:\WORKS\WORKSPACES_APTANA\NewsReader3
-rails s --port 3000
-
 C:\WORKS\PROGRAMS\FreeMind\Freemind.exe C:\WORKS\WORKSPACES_ANDROID\FM\NewsReader3_R\NewsReader3.mm
+gitk
+
+rails s --port 3000
+
+pushd C:\WORKS\WORKSPACES_APTANA\NewsReader3
+
 
 
 [Git]

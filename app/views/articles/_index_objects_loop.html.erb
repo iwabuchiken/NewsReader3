@@ -1,0 +1,7 @@
+<% @objects.each_with_index do |item, i| %>
+
+	<%= render :partial => "index_objects_loop_content", :locals => {:i => i, :item => item} %>
+	<%#= render "index_objecrs_loop_content", :locals => {:i => i, :item => item} %>
+
+
+<% end %>

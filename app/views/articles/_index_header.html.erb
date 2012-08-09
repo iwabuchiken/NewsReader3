@@ -1,0 +1,45 @@
+<div>
+	<%= form_tag('#', :method => :get) do %>
+		読み込むページ数
+		<!-- 	REF => http://d.hatena.ne.jp/utadaq/20080506	 -->
+		<%= text_field_tag "doc_num", @current_num || '', :size => '1', :style => "text-align: right;" %>
+		
+		<span style="background-color: green; color: white">
+			ジャンル</span>
+<!-- 			<select name="genre_name"> -->
+			<select name="genre">
+				<% @genres.length.times do |i| %>
+					<option value="<%= @genres[@genres.keys[i]] %>" 
+								<%#= params['genre_name'] == i.to_s ? "selected" : '' %>
+							<% if session[:genre] %>
+								<%= session[:genre] == @genres[@genres.keys[i]] ? "selected" : '' %>
+							<% else %>
+								<%= params['genre'] == @genres[@genres.keys[i]] ? "selected" : '' %>
+							<% end %>
+								
+						>
+							<%= @genres.keys[i] %>
+							
+					</option>
+				<% end %>
+			</select>
+		</span>
+
+		<%= submit_tag "Go" %>
+
+		<span style="background-color: green; color: white">
+			記事総数</span>
+			
+			<% if @objects != nil %>
+				<%= @objects.length %>
+			<% else %>
+				0
+			<% end %>
+		</span>
+		
+		|
+		<%= link_to "Admin", genres_path, :class => "a_blue" %>
+		
+	<% end %> <%#= form_tag('#', :method => :get) do %>
+	
+</div>

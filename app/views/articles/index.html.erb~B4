@@ -1,0 +1,27 @@
+<%= render "index_header" %>
+
+<hr />
+
+<%= render "index_admin_data" %>
+
+<hr /> <!-- -------------------------------------------------- -->
+ 
+<% @objects.each_with_index do |item, i| %>
+
+	<%= i %>. <%= link_to item.content, item['href'], :target => "_blank" %>
+
+	<% if i != 0 and i % 10 == 0 %>
+	
+		<hr />
+	
+	<% end %>
+	
+	
+	
+	<br />
+	<%#= render "index_objecrs_loop_content", :locals => {:i => i, :item => item} %>
+
+
+<% end %>
+
+<hr />

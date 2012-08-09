@@ -1,0 +1,32 @@
+<dl class="accordion">
+	<dt>
+		<span style="color: green">Admin data</span>
+	</dt>
+	
+	<dd>
+		<%= @params.keys %><br />
+		
+		<% if @params['genre'] != nil %>
+			@params['genre'] => <%= @params['genre'] %>
+		<% else %>
+			@params['genre'] => nil
+		<% end %>
+		<br />
+
+		@genre => <%= @genre %>
+		<br />
+		
+		@genres => <%= @genres %>
+		<br />
+		
+		session[:doc_num] => <%= session[:doc_num] %>
+		<br />
+		
+		session[:genre] => <%= session[:genre] %>
+		<br />
+		
+		<% if flash['message'] != nil %>
+			<%= flash['message'] %>
+		<% end %>	
+	</dd>
+</dl>
