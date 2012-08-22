@@ -1126,6 +1126,9 @@ class ArticlesController < ApplicationController
             
           end#@kw[0].each do |word|
           
+          if is_in == true
+            break
+          end
 
         end#@kw.length.times do |i|
 

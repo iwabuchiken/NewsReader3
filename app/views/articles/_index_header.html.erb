@@ -1,6 +1,8 @@
 <div>
 	<%= form_tag('#', :method => :get) do %>
-		読み込むページ数
+		<span id="top">
+			読み込むページ数
+		</span>
 		<!-- 	REF => http://d.hatena.ne.jp/utadaq/20080506	 -->
 		<%= text_field_tag "doc_num", @current_num || '', :size => '1', :style => "text-align: right;" %>
 		

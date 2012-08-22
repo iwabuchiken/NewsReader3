@@ -2,16 +2,37 @@
 
 <%= render "index_header" %>
 
+<!-- <span id="top"></span> -->
+
 <hr />
 
 <%= render "index_admin_data" %>
 
 <hr /> <!-- -------------------------------------------------- -->
- 
+
+	<% @category_names.each do |item| %>
+	
+		<%= link_to item, "##{item}" %> | 
+	
+	<% end %> 
+
+<hr />
+
 <% @objects.each_with_index do |cats, j| %>
 	
 	<span style="color: blue;">
-		<%= @category_names[j] %>
+<!-- 		<div name="<%#= @category_names[j] %>"> -->
+		<div>
+			<span id="<%= @category_names[j] %>">
+				<%= @category_names[j] %> (<%= cats.size %>) |
+			</span>
+			
+			<span>
+				<%= link_to "Top", "#top" %>
+			</span>
+		</div>
+		
+		
 	</span>
 	<hr />
 	<% cats.each_with_index do |item, i| %>
