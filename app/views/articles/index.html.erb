@@ -39,7 +39,9 @@
 	
 		<%#= i %> 
 		<%= i + 1 %>.
-		<%= link_to item.content, item['href'], :target => "_blank" %><br />
+		<%#= link_to item.content, item['href'], :target => "_blank" %>
+		<%= link_to raw(item.content), item['href'], :target => "_blank" %>
+		<br />
 	
 		<%# if i != 0 and i % 10 == 0 %>
 		<% if (i < 12 and i > 8 and i % 9 == 0) or

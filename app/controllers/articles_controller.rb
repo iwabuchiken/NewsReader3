@@ -1116,6 +1116,8 @@ class ArticlesController < ApplicationController
             
             if item.content.include?(word)
               
+              item.content = item.content.gsub(word, "<span style='color: green'>#{word}</span>")
+              
               cat[i].push(item)
               
               is_in = true
