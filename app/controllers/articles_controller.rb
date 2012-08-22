@@ -62,16 +62,31 @@ class ArticlesController < ApplicationController
       #----------------------
       # 3. Get objects
       #----------------------
-      #//----------- try_2 -----------------
-      # @objects = try_1(number)
-      @objects = try_2(number, @genre)
-      
+      #//----------- try_3 -----------------
       @current_num = number
       
       @params = params
       
-      @category_names = ["abc", "def"]
+      @category_names = ["abc", "def", "ghi", "jkl"]
       
+      # @category_names = ["US"]
+#       
+      # @kw[0][0] = ["米国", "米", "アメリカ"]# @category_keywords = []
+#       
+      # @category_keywords[0] = [""]
+
+      @objects = try_2(number, @genre)
+      
+      #//----------- try_2 -----------------
+      # @objects = try_1(number)
+      # @objects = try_2(number, @genre)
+#       
+      # @current_num = number
+#       
+      # @params = params
+#       
+      # @category_names = ["abc", "def"]
+#       
       
       # #//----------- try_1 -----------------
       # # @objects = try_1(number)
@@ -945,4 +960,80 @@ class ArticlesController < ApplicationController
     
   end#def try_2
 
+  #--------- try_3 --------------------------------------------
+  def categorize(a_tags)
+      #==========================
+      # Steps
+      # 1. 
+      
+      #==========================
+      len = a_tags.size
+      
+      if @category_names != nil
+        divisions = @category_names.size
+      else
+        divisions = 2
+      end
+
+      ret = []
+      
+      num_of_items_in_one_slot = len / divisions
+      
+      # int n = 0
+      
+      divisions.times do |i|
+        
+        # ret.append(a_tags[i * (len / divisions)..(i + len / divisions)])
+        ret.append(a_tags[i * (num_of_items_in_one_slot)..(i * (num_of_items_in_one_slot) + num_of_items_in_one_slot)])
+        
+      end      
+      
+      # return [a_tags[0..(len/2)], a_tags[(len/2)..len]]
+      # return [a_tags[0..(len/divisions)], a_tags[(len/divisions)..len]]
+      return ret
+      
+    
+  end#def categorize(a_tags)
+  
+  def try_3(doc_num=3, genre="soci")
+    ###########################
+    # Steps
+    # 1. Get categories
+    # 2. Get docs
+    # 3. Get a_tags
+    # 4. Categorize
+    # 9. Return tags     
+    ###########################
+    
+    #=====================
+    # 1. Get categories
+    #=====================
+    # Param
+
+    # Switch
+    
+    #=====================
+    # 2. Get docs
+    #=====================
+    docs = get_docs(doc_num, genre)
+
+    #=====================
+    # 3. Get a_tags
+    #=====================
+    a_tags = get_atags(docs)
+
+    #----------------------    
+    # 4. Categorize
+    #----------------------
+    categories = categorize(a_tags)
+    
+    #----------------------
+    # 9. Return tags
+    #----------------------
+    return categories
+    # return a_tags
+    
+  end#def try_3
+
 end
+
