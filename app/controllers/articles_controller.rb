@@ -23,42 +23,13 @@ class ArticlesController < ApplicationController
       #------------------------------
       # 1. Get number of docs
       #------------------------------
-      if params['doc_num'] != nil
-        doc_num = params['doc_num']
-      elsif session[:doc_num] != nil
-        doc_num = session[:doc_num]
-      else
-        doc_num = nil
-      end
-        
-        
-      if doc_num == nil
-          number = 3
-      elsif doc_num != nil
-          if BASICS.is_numeric?(doc_num)
-              number = doc_num.to_i
-          elsif
-              flash['message'] = "Input is not an integer"
-              number = 3
-          end
-        
-      end
+      number = get_num_of_docs()
       
       #----------------------
       # 2. Set genre
       #----------------------
-      if params['genre']
-        p_genre = params['genre']
-      else
-        p_genre = session[:genre]
-      end
-      
-      if p_genre != nil
-        @genre = p_genre
-      else
-        @genre = "soci"
-      end
-      
+      @genre = get_genre()
+            
       #----------------------
       # 3. Get objects
       #----------------------
@@ -67,15 +38,17 @@ class ArticlesController < ApplicationController
       
       @params = params
       
-      @category_names = ["abc", "def", "ghi", "jkl"]
+      # @category_names = ["abc", "def", "ghi", "jkl"]
       
       # @category_names = ["US"]
+      @category_names = ["US", "Others"]
 #       
-      # @kw[0][0] = ["米国", "米", "アメリカ"]# @category_keywords = []
-#       
-      # @category_keywords[0] = [""]
-
-      @objects = try_2(number, @genre)
+      @kw = []
+      @kw[0] = ["米国", "米", "アメリカ"]
+      
+      # @category_keywords[0] = [""]ts = try_2(number, @genre)
+      
+      @objects = try_3(number, @genre)
       
       #//----------- try_2 -----------------
       # @objects = try_1(number)
@@ -961,7 +934,84 @@ class ArticlesController < ApplicationController
   end#def try_2
 
   #--------- try_3 --------------------------------------------
+  def get_num_of_docs()
+    
+      if params['doc_num'] != nil
+        doc_num = params['doc_num']
+      elsif session[:doc_num] != nil
+        doc_num = session[:doc_num]
+      else
+        doc_num = nil
+      end
+        
+        
+      if doc_num == nil
+          number = 3
+      elsif doc_num != nil
+          if BASICS.is_numeric?(doc_num)
+              number = doc_num.to_i
+          elsif
+              flash['message'] = "Input is not an integer"
+              number = 3
+          end
+        
+      end
+      
+      return number
+
+  end#def get_num_of_docs()
+
+  def get_genre()
+
+      if params['genre']
+        p_genre = params['genre']
+      else
+        p_genre = session[:genre]
+      end
+      
+      if p_genre != nil
+        return p_genre
+      else
+        return "soci"
+      end
+
+  end#def get_genre()
+  
   def categorize(a_tags)
+      #==========================
+      # Steps
+      # 1. 
+      
+      #==========================
+      len = a_tags.size
+      
+      if @category_names != nil
+        divisions = @category_names.size
+      else
+        divisions = 2
+      end
+      
+      num_of_items_in_one_slot = len / divisions
+      
+      # int n = 0
+      
+      ret = []
+      
+      divisions.times do |i|
+        
+        # ret.append(a_tags[i * (len / divisions)..(i + len / divisions)])
+        ret.append(a_tags[i * (num_of_items_in_one_slot)..(i * (num_of_items_in_one_slot) + num_of_items_in_one_slot)])
+        
+      end      
+      
+      # return [a_tags[0..(len/2)], a_tags[(len/2)..len]]
+      # return [a_tags[0..(len/divisions)], a_tags[(len/divisions)..len]]
+      return ret
+      
+    
+  end#def categorize(a_tags)
+
+  def categorize_new(a_tags)
       #==========================
       # Steps
       # 1. 
@@ -977,23 +1027,59 @@ class ArticlesController < ApplicationController
 
       ret = []
       
-      num_of_items_in_one_slot = len / divisions
+      cat = []
+      cat[0] = []
+      cat[1] = []
+      
+      a_tags.each do |item|
+        
+        is_in = false
+        
+        @kw[0].each do |word|
+          
+          if item.content.include?(word)
+            
+            cat[0].push(item)
+            
+            is_in = true
+            
+            break
+            
+          end
+          
+        end#@kw[0][0].each do |word|
+
+        if is_in == false
+          
+          cat[1].push(item)
+          
+        end
+        
+      end#a_tags.each do |item|
+      
+      cat.each do |x|
+        
+        ret.push(x)
+        
+      end#cat.each do |x|
+      
+      # num_of_items_in_one_slot = len / divisions
       
       # int n = 0
       
-      divisions.times do |i|
-        
-        # ret.append(a_tags[i * (len / divisions)..(i + len / divisions)])
-        ret.append(a_tags[i * (num_of_items_in_one_slot)..(i * (num_of_items_in_one_slot) + num_of_items_in_one_slot)])
-        
-      end      
+      # divisions.times do |i|
+#         
+        # # ret.append(a_tags[i * (len / divisions)..(i + len / divisions)])
+        # ret.append(a_tags[i * (num_of_items_in_one_slot)..(i * (num_of_items_in_one_slot) + num_of_items_in_one_slot)])
+#         
+      # end      
       
       # return [a_tags[0..(len/2)], a_tags[(len/2)..len]]
       # return [a_tags[0..(len/divisions)], a_tags[(len/divisions)..len]]
       return ret
       
     
-  end#def categorize(a_tags)
+  end#def categorize_new(a_tags)
   
   def try_3(doc_num=3, genre="soci")
     ###########################
@@ -1025,7 +1111,8 @@ class ArticlesController < ApplicationController
     #----------------------    
     # 4. Categorize
     #----------------------
-    categories = categorize(a_tags)
+    # categories = categorize(a_tags)
+    categories = categorize_new(a_tags)
     
     #----------------------
     # 9. Return tags
