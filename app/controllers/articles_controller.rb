@@ -37,12 +37,25 @@ class ArticlesController < ApplicationController
       @params = params
       
       # @category_names = ["US", "Others"]
-      @category_names = ["US", "China", "Others"]
+      # @category_names = ["US", "China", "Others"]
+      # @category_names = ["US", "China", "Europe", "Others"]
+      # @category_names = ["US", "China", "Europe", "Korea", "Others"]
+      if @genre == "int"
+        @category_names = ["US", "China", "Europe", "Korea", "Middle east", "Others"]
+      else
+        @category_names = ["All"]
+      end
 #       
       @kw = []
       @kw[0] = ["米国", "米", "アメリカ"]
       
-      @kw[1] = ["中国", "中", "アメリカ"]
+      @kw[1] = ["中国", "中"]
+      
+      @kw[2] = ["ヨーロッパ", "欧州", "欧", "ロシア", "イギリス", "フランス"]
+      
+      @kw[3] = ["韓国", "韓", "朝鮮"]
+      
+      @kw[4] = ["イラン", "シリア", "イラク"]
       
       @objects = try_3(number, @genre)
       
@@ -1063,7 +1076,7 @@ class ArticlesController < ApplicationController
     
   end#def categorize_new(a_tags)
 
-  def categorize_new2(a_tags)
+  def categorize_new3(a_tags)
       #==========================
       # Steps
       # 1. 
@@ -1138,7 +1151,7 @@ class ArticlesController < ApplicationController
       
       return ret
     
-  end#def categorize_new2(a_tags)
+  end#def categorize_new3(a_tags)
   
   def try_3(doc_num=3, genre="soci")
     ###########################
@@ -1172,7 +1185,19 @@ class ArticlesController < ApplicationController
     #----------------------
     # categories = categorize(a_tags)
     # categories = categorize_new(a_tags)
-    categories = categorize_new2(a_tags)
+    # categories = categorize_new2(a_tags)
+    
+    categories = []
+    
+    if @genre == "int"
+        
+      categories = categorize_new3(a_tags)
+      
+    else
+      
+      categories.push(a_tags)
+      
+    end
     
     #----------------------
     # 9. Return tags
