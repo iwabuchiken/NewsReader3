@@ -18,8 +18,6 @@ class ArticlesController < ApplicationController
       
       # 4. Set session objects
       #------------------------------
-      # @objects = try_1(doc_num)
-      
       #------------------------------
       # 1. Get number of docs
       #------------------------------
@@ -38,15 +36,13 @@ class ArticlesController < ApplicationController
       
       @params = params
       
-      # @category_names = ["abc", "def", "ghi", "jkl"]
-      
-      # @category_names = ["US"]
-      @category_names = ["US", "Others"]
+      # @category_names = ["US", "Others"]
+      @category_names = ["US", "China", "Others"]
 #       
       @kw = []
       @kw[0] = ["米国", "米", "アメリカ"]
       
-      # @category_keywords[0] = [""]ts = try_2(number, @genre)
+      @kw[1] = ["中国", "中", "アメリカ"]
       
       @objects = try_3(number, @genre)
       
@@ -1063,23 +1059,86 @@ class ArticlesController < ApplicationController
         
       end#cat.each do |x|
       
-      # num_of_items_in_one_slot = len / divisions
-      
-      # int n = 0
-      
-      # divisions.times do |i|
-#         
-        # # ret.append(a_tags[i * (len / divisions)..(i + len / divisions)])
-        # ret.append(a_tags[i * (num_of_items_in_one_slot)..(i * (num_of_items_in_one_slot) + num_of_items_in_one_slot)])
-#         
-      # end      
-      
-      # return [a_tags[0..(len/2)], a_tags[(len/2)..len]]
-      # return [a_tags[0..(len/divisions)], a_tags[(len/divisions)..len]]
       return ret
-      
     
   end#def categorize_new(a_tags)
+
+  def categorize_new2(a_tags)
+      #==========================
+      # Steps
+      # 1. 
+      
+      #==========================
+      len = a_tags.size
+      
+      if @category_names != nil
+        divisions = @category_names.size
+      else
+        divisions = 2
+      end
+
+      ret = []
+      
+      cat = []
+      
+      # num_of_categories = 2
+      num_of_categories = @category_names.size
+      
+      num_of_categories.times do |i|
+        
+        cat[i] = []
+        
+      end
+      
+      # cat[0] = []
+      # cat[1] = []
+      
+      a_tags.each do |item|
+        
+        is_in = false
+        
+        @kw.length.times do |i|
+        
+          @kw[i].each do |word|
+            
+            if item.content.include?(word)
+              
+              cat[i].push(item)
+              
+              is_in = true
+              
+              break
+              
+            end
+            
+          end#@kw[0].each do |word|
+          
+
+        end#@kw.length.times do |i|
+
+        if is_in == false
+          
+          cat[cat.length - 1].push(item)
+          
+        end
+
+        # if is_in == false
+#           
+          # cat[1].push(item)
+#           
+        # end
+        
+      end#a_tags.each do |item|
+      
+      cat.each do |x|
+        
+        ret.push(x)
+        
+      end#cat.each do |x|
+      
+      return ret
+    
+  end#def categorize_new2(a_tags)
   
   def try_3(doc_num=3, genre="soci")
     ###########################
@@ -1112,7 +1171,8 @@ class ArticlesController < ApplicationController
     # 4. Categorize
     #----------------------
     # categories = categorize(a_tags)
-    categories = categorize_new(a_tags)
+    # categories = categorize_new(a_tags)
+    categories = categorize_new2(a_tags)
     
     #----------------------
     # 9. Return tags
