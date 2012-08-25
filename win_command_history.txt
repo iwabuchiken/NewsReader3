@@ -122,6 +122,11 @@ heroku run rake db:migrate
 # g p heroku master
 # heroku run rake db:migrate
 
+[20120825_223801]-------------------------------------
+rails generate scaffold Category name:string genre_id:integer
+bundle exec rake db:migrate
 
+rails generate scaffold Keyword name:string category_id:integer
+bundle exec rake db:migrate
 
 ============EOF============

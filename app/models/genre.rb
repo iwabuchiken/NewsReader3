@@ -1,2 +1,4 @@
 class Genre < ActiveRecord::Base
-end
+  has_many :category
+  
+end#class Genre < ActiveRecord::Base

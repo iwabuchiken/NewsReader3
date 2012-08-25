@@ -26,7 +26,9 @@
 <%= yield %>
 
 <hr />
-<%= link_to "Back to articles", articles_path, {:doc_num => session[:doc_num]} %>
+<%#= link_to "Back to articles", articles_path, {:doc_num => session[:doc_num]} %>
+
+	<%= render :partial => "layouts/admin_footer" %>
 
 </body>
 </html>

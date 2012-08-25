@@ -1,5 +1,9 @@
 NewsReader3::Application.routes.draw do
   
+  resources :keywords
+
+  resources :categories
+
   resources :genres
 
   resources :articles
