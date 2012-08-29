@@ -129,4 +129,6 @@ bundle exec rake db:migrate
 rails generate scaffold Keyword name:string category_id:integer
 bundle exec rake db:migrate
 
+heroku run rake db:migrate
+
 ============EOF============

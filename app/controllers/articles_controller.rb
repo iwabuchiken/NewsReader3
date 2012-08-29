@@ -40,23 +40,72 @@ class ArticlesController < ApplicationController
       # @category_names = ["US", "China", "Others"]
       # @category_names = ["US", "China", "Europe", "Others"]
       # @category_names = ["US", "China", "Europe", "Korea", "Others"]
+      
+      @kw = []
+      
       if @genre == "int"
         @category_names = ["US", "China", "Europe", "Korea", "Middle east", "Others"]
-      else
+        
+        @kw[0] = ["米国", "米", "アメリカ"]
+      
+        @kw[1] = ["中国", "中"]
+        
+        @kw[2] = ["ヨーロッパ", "欧州", "欧", "ロシア", "イギリス", "フランス"]
+        
+        @kw[3] = ["韓国", "韓", "朝鮮"]
+        
+        @kw[4] = ["イラン", "シリア", "イラク"]
+        
+      elsif @genre == "bus_all"
+
+        @category_names = [
+                          "US", "China", "Europe", 
+                          "Korea", "Middle east",
+                          "Japan: Automobile",
+                          "Japan: Electronics", 
+                          "Energy",
+                          "Securities, foreign exchanges",
+                          "Others"]
+        
+        @kw[0] = ["米国", "米", "アメリカ"]
+      
+        @kw[1] = ["中国", "中"]
+        
+        @kw[2] = [
+                        "ヨーロッパ", "欧州", "欧", "EURIBOR", "EURO", "ユーロ", 
+                        "ロシア", "東欧", "ポーランド", 
+                        "イギリス", "フランス", "ドイツ", 
+                        "スペイン", "イタリア", "伊", "ポルトガル", 
+                        ]
+        
+        @kw[3] = [
+                        "韓国", "韓", "朝鮮",
+                        "サムスン", "現代"
+                        ]
+        
+        @kw[4] = ["イラン", "シリア", "イラク"]
+        
+        @kw[5] = [
+                        "自動車", "乗用車",
+                        "日産", "日野", "三菱自", "トヨタ", "ダイハツ", "ホンダ", "マツダ",
+                        "ＢＭＷ", "BMW", "ベンツ"
+                        ]
+        
+        @kw[6] = [
+                          "ソニー", "パナソニック", "松下", "シャープ", "東芝", "三菱電",
+                          "セイコー"
+                          
+                          ]
+        
+        @kw[7] = ["ガソリン", "ソーラー", "原油", "原発", "石油", "エネルギー", "発電", "火力"]
+        
+        @kw[8] = ["証券", "相場", "円", "日経平均", "ＥＵＲＩＢＯＲ"]
+        
+      else 
         @category_names = ["All"]
       end
 #       
-      @kw = []
-      @kw[0] = ["米国", "米", "アメリカ"]
-      
-      @kw[1] = ["中国", "中"]
-      
-      @kw[2] = ["ヨーロッパ", "欧州", "欧", "ロシア", "イギリス", "フランス"]
-      
-      @kw[3] = ["韓国", "韓", "朝鮮"]
-      
-      @kw[4] = ["イラン", "シリア", "イラク"]
-      
+
       @objects = try_3(number, @genre)
       
       #//----------- try_2 -----------------
@@ -1196,6 +1245,10 @@ class ArticlesController < ApplicationController
     
     if @genre == "int"
         
+      categories = categorize_new3(a_tags)
+      
+    elsif @genre == "bus_all"
+      
       categories = categorize_new3(a_tags)
       
     else
