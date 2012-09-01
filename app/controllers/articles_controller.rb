@@ -101,6 +101,33 @@ class ArticlesController < ApplicationController
         
         @kw[8] = ["証券", "相場", "円", "日経平均", "ＥＵＲＩＢＯＲ"]
         
+      elsif @genre == "soci"
+        
+        @category_names = [
+                              #"原発", "事件", "政治"
+                              "Nuclear plants", "Incidents", "Political issues",
+                              "韓国", "中国", "医療/介護", "災害", "Others"
+                              ]
+        
+        # @kw[0] = ["原発", "福島", "", "東電", "東京電力", "原子力"]
+        @kw[0] = ["原発", "福島", "東電", "東京電力", "原子力"] 
+        
+        # Incidents
+        @kw[1] = ["殺人", "傷害", "盗撮", "事件", "逮捕", "いじめ", "女性"]
+        
+        @kw[2] = ["首相", "市長", "選挙"]
+        
+        @kw[3] = ["韓国", "竹島"]
+        
+        # 中国
+        @kw[4] = ["中国", "尖閣", "日中"]
+        
+        # 医療/介護
+        @kw[5] = ["介護", "がん", "感染", "食中毒", "けが", "出生", "風邪", "妊娠"]
+        
+        # 災害
+        @kw[6] = ["防災", "高温", "津波"]
+        
       else 
         @category_names = ["All"]
       end
@@ -992,6 +1019,25 @@ class ArticlesController < ApplicationController
   end#def try_2
 
   #--------- try_3 --------------------------------------------
+  def write_log(text, file, line)
+    
+    f = open("log.log", "a")
+    
+    # f.write("[#{get_time_label_now()}]" + line + ": " + text)
+    f.write("[#{get_time_label_now()}] [#{file}: #{line}] #{text}")
+    
+    f.write("\n")
+    
+    f.close
+    
+  end#def write_log()
+  
+  def get_time_label_now()
+    
+    return Time.now.strftime("%Y%m%d_%H%M%S")
+    
+  end#def get_time_label_now()
+  
   def get_num_of_docs()
     
       if params['doc_num'] != nil
@@ -1206,6 +1252,128 @@ class ArticlesController < ApplicationController
       return ret
     
   end#def categorize_new3(a_tags)
+
+  def categorize_new3_soci(a_tags)
+      #==========================
+      # Steps
+      # 1. 
+      
+      #==========================
+      
+      write_log(
+            "\n\ncategorize_new3_soci(a_tags)----------------------", 
+            # __FILE__,
+            __FILE__.split("/")[-1],
+            __LINE__.to_s)
+      
+      len = a_tags.size
+      
+      # write_log("len: #{len.to_s}",
+            # __FILE__.split("/")[-1],
+            # __LINE__.to_s)
+      
+      if @category_names != nil
+        divisions = @category_names.size
+        
+        # write_log("@category_names.size: #{@category_names.size} / divisions: #{divisions}",
+            # __FILE__.split("/")[-1],
+            # __LINE__.to_s)
+        
+      else
+        divisions = 2
+      end
+
+      ret = []
+      
+      cat = []
+      
+      # num_of_categories = 2
+      num_of_categories = @category_names.size
+      
+      num_of_categories.times do |i|
+        
+        cat[i] = []
+        
+      end
+      
+      write_log("cat.size: #{cat.size}",
+            __FILE__.split("/")[-1],
+            __LINE__.to_s)
+      
+      # cat[0] = []
+      # cat[1] = []
+      
+      write_log("@kw.length: #{@kw.length}",
+            __FILE__.split("/")[-1],
+            __LINE__.to_s)
+      
+      a_tags.each do |item|
+        
+        is_in = false
+        
+        @kw.length.times do |i|
+        
+          write_log("i : #{i}",
+                __FILE__.split("/")[-1],
+                __LINE__.to_s)
+        
+          @kw[i].each do |word|
+            
+            write_log("word: #{word}",
+                __FILE__.split("/")[-1],
+                __LINE__.to_s)
+            
+            if item.content.include?(word)
+              
+              write_log("item.content: #{item.content} / word: #{word}",
+                  __FILE__.split("/")[-1],
+                  __LINE__.to_s)
+              
+              item.content = item.content.gsub(word, "<span style='color: green'>#{word}</span>")
+              
+              cat[i].push(item)
+              
+              is_in = true
+              
+              break
+              
+            end
+            
+          end#@kw[0].each do |word|
+          
+          if is_in == true
+            break
+          end
+
+        end#@kw.length.times do |i|
+
+        if is_in == false
+          
+          write_log("is_in: #{is_in}",
+              __FILE__.split("/")[-1],
+              __LINE__.to_s)
+          
+          cat[cat.length - 1].push(item)
+          
+        end
+
+        # if is_in == false
+#           
+          # cat[1].push(item)
+#           
+        # end
+        
+      end#a_tags.each do |item|
+      
+      cat.each do |x|
+        
+        ret.push(x)
+        
+      end#cat.each do |x|
+      
+      return ret
+    
+  end#def categorize_new3(a_tags)
   
   def try_3(doc_num=3, genre="soci")
     ###########################
@@ -1251,6 +1419,10 @@ class ArticlesController < ApplicationController
       
       categories = categorize_new3(a_tags)
       
+    elsif @genre == "soci"
+      
+      categories = categorize_new3_soci(a_tags)
+      
     else
       
       categories.push(a_tags)
@@ -1264,6 +1436,7 @@ class ArticlesController < ApplicationController
     # return a_tags
     
   end#def try_3
+
 
 end
 
