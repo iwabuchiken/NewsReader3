@@ -7,9 +7,46 @@
 
 <p>
   <b>Category:</b>
-  <%= @keyword.category_id %>
+      	<% if @keyword.category != nil %>
+    	
+    		<%= @keyword.category.name %>
+    		
+		<% else %>
+		
+			No data
+		
+		<% end %>
+
+  <%#= @keyword.category_id %>
+</p>
+
+<p>
+  <b>Genre:</b>
+      	<% if @keyword.category != nil %>
+
+	      	<% if @keyword.category.genre != nil %>
+	    	
+	    		<%= @keyword.category.genre.name %>
+	    		
+			<% else %>
+			
+				No data
+			
+			<% end %>
+
+    	
+    		<%#= @keyword.category.name %>
+    		
+		<% else %>
+		
+			No data
+		
+		<% end %>
+
+  <%#= @keyword.category_id %>
 </p>
 
 
 <%= link_to 'Edit', edit_keyword_path(@keyword) %> |
+<%= link_to 'Destroy', @keyword, confirm: 'Are you sure?', method: :delete %> | 
 <%= link_to 'Back', keywords_path %>

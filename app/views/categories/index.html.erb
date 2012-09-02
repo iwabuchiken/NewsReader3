@@ -2,22 +2,29 @@
 
 <table>
   <tr>
+  	<th>Id</th>
     <th>Name</th>
     <th>Genre</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @categories.each do |category| %>
   <tr>
-    <td><%= category.name %></td>
+  	<td><%= category.id %></td>
+    <td><%= link_to category.name, category %></td>
     <td>
-		<%= category.genre_id %>
+    	<% if category.genre != nil %>
+    	
+    		<%= category.genre.name %>
+    		
+    	<% else %>
+    	
+    		No data
+    	
+    	<% end %>
+			
+			
 	</td>
-    <td><%= link_to 'Show', category %></td>
-    <td><%= link_to 'Edit', edit_category_path(category) %></td>
-    <td><%= link_to 'Destroy', category, confirm: 'Are you sure?', method: :delete %></td>
+
   </tr>
 <% end %>
 </table>

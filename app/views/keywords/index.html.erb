@@ -11,11 +11,20 @@
 
 <% @keywords.each do |keyword| %>
   <tr>
-    <td><%= keyword.name %></td>
-    <td><%= keyword.category_id %></td>
-    <td><%= link_to 'Show', keyword %></td>
-    <td><%= link_to 'Edit', edit_keyword_path(keyword) %></td>
-    <td><%= link_to 'Destroy', keyword, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to keyword.name, keyword %></td>
+    <td>
+    	<% if keyword.category != nil %>
+    	
+    		<%= keyword.category.name %>
+    		<%= "(#{keyword.category.id})" %>
+    		
+		<% else %>
+		
+			No data
+		
+		<% end %>
+	</td>
+    
   </tr>
 <% end %>
 </table>

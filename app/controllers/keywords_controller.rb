@@ -43,19 +43,20 @@ class KeywordsController < ApplicationController
   # POST /keywords
   # POST /keywords.json
   def create
-    @keyword = Keyword.new(params[:keyword])
-
-    respond_to do |format|
-      if @keyword.save
-        format.html { redirect_to @keyword, notice: 'Keyword was successfully created.' }
-        format.json { render json: @keyword, status: :created, location: @keyword }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @keyword.errors, status: :unprocessable_entity }
-      end
-    end
+    create_v1()
+    # @keyword = Keyword.new(params[:keyword])
+# 
+    # respond_to do |format|
+      # if @keyword.save
+        # format.html { redirect_to @keyword, notice: 'Keyword was successfully created.' }
+        # format.json { render json: @keyword, status: :created, location: @keyword }
+      # else
+        # format.html { render action: "new" }
+        # format.json { render json: @keyword.errors, status: :unprocessable_entity }
+      # end
+    # end
   end
-
+  
   # PUT /keywords/1
   # PUT /keywords/1.json
   def update
@@ -83,4 +84,66 @@ class KeywordsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  private #=========================================
+  def create_v1()
+    
+    keyword = params[:keyword]
+    keyword_name = keyword['name']
+    
+    write_log("keyword.to_s: #{keyword.to_s}",
+                __FILE__.split("/")[-1],
+                __LINE__.to_s)
+    
+    keywords = []
+    if keyword_name != nil
+      keywords = keyword_name.split(" ")
+    end
+    
+    write_log("keywords.size: #{keywords.size}",
+                __FILE__.split("/")[-1],
+                __LINE__.to_s)
+
+    if keywords.size > 1
+      
+      flag = true
+      counter = 0
+      
+      keywords.each do |kw|
+        # @category = Category.new(params[:category])
+        # @category = Category.new(name=cat)
+        @keyword = Keyword.new({"name"=> kw, "category_id"=> keyword['category_id']})
+        
+        if @keyword.save
+        else
+          counter += 1
+        end
+      end#cats.each do |cat|
+      
+      respond_to do |format|
+          format.html { redirect_to @keyword, 
+                          notice: "New keywords: Created => #{keywords.size - counter}, Failed => #{counter}" }
+          format.json { render json: @keyword, status: :created, location: @keyword }
+      end
+      
+    else#if cats.size > 1
+        @keyword = Keyword.new(params[:keyword])
+    
+        respond_to do |format|
+          if @keyword.save
+            format.html { redirect_to @keyword, notice: 'Keyword was successfully created.' }
+            format.json { render json: @keyword, status: :created, location: @keyword }
+          else
+            format.html { render action: "new" }
+            format.json { render json: @keyword.errors, status: :unprocessable_entity }
+          end
+        end
+    end#if cats.size > 1
+
+    
+  end#create_v1()
+  
+  
 end
+
+

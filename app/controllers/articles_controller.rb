@@ -6,6 +6,9 @@ require 'open-uri'
 require 'basics'
 include BASICS
 
+require 'utils'
+# load 'utils'
+
 class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
@@ -44,17 +47,8 @@ class ArticlesController < ApplicationController
       @kw = []
       
       if @genre == "int"
-        @category_names = ["US", "China", "Europe", "Korea", "Middle east", "Others"]
-        
-        @kw[0] = ["米国", "米", "アメリカ"]
-      
-        @kw[1] = ["中国", "中"]
-        
-        @kw[2] = ["ヨーロッパ", "欧州", "欧", "ロシア", "イギリス", "フランス"]
-        
-        @kw[3] = ["韓国", "韓", "朝鮮"]
-        
-        @kw[4] = ["イラン", "シリア", "イラク"]
+
+        set_category_names_and_keywords_int()
         
       elsif @genre == "bus_all"
 
@@ -100,7 +94,7 @@ class ArticlesController < ApplicationController
         @kw[7] = ["ガソリン", "ソーラー", "原油", "原発", "石油", "エネルギー", "発電", "火力"]
         
         @kw[8] = ["証券", "相場", "円", "日経平均", "ＥＵＲＩＢＯＲ"]
-        
+    
       elsif @genre == "soci"
         
         @category_names = [
@@ -1019,24 +1013,104 @@ class ArticlesController < ApplicationController
   end#def try_2
 
   #--------- try_3 --------------------------------------------
-  def write_log(text, file, line)
-    
-    f = open("log.log", "a")
-    
-    # f.write("[#{get_time_label_now()}]" + line + ": " + text)
-    f.write("[#{get_time_label_now()}] [#{file}: #{line}] #{text}")
-    
-    f.write("\n")
-    
-    f.close
-    
-  end#def write_log()
+  # def write_log(text, file, line)
+#     
+    # f = open("log.log", "a")
+#     
+    # # f.write("[#{get_time_label_now()}]" + line + ": " + text)
+    # f.write("[#{get_time_label_now()}] [#{file}: #{line}] #{text}")
+#     
+    # f.write("\n")
+#     
+    # f.close
+#     
+  # end#def write_log()
   
-  def get_time_label_now()
+  # def get_time_label_now()
+#     
+    # return Time.now.strftime("%Y%m%d_%H%M%S")
+#     
+  # end#def get_time_label_now()
+  
+  def set_category_names_and_keywords_int()
+        # @category_names = ["US", "China", "Europe", "Korea", "Middle east", "Others"]
+        
+        # categories = Category.find(:all, :genre_id => 3)
+        genre = Genre.find_by_code("int")
+        
+        if genre != nil
+          
+          categories = Category.find_all_by_genre_id(genre.id)
+          
+          write_log(
+                "genre != nil => #{genre.name}", 
+                # __FILE__,
+                __FILE__.split("/")[-1],
+                __LINE__.to_s)
+          
+        else
+          
+          write_log(
+                "genre == nil", 
+                # __FILE__,
+                __FILE__.split("/")[-1],
+                __LINE__.to_s)
+
+          
+          # render :text "Genre wasn't found by the code 'int'"
+          
+        end
+        
+        # categories = Category.find_all_by_genre_id(3)
+        
+        @category_names = []
+        
+        categories.each do |cat|
+          
+          @category_names.append(cat.name)
+          
+        end
+        
+        @category_names.append("Others")
+        
+        
+        category = Category.find_by_name("US")
+        
+        if category != nil
+          
+          kws = Keyword.find_all_by_category_id(category.id)
+          
+          @kw[0] = []
+          
+          kws.each do |kw|
+            
+            @kw[0].append(kw.name)
+            
+          end
+          
+           
+          
+        else
+          
+          @kw[0] = ["米国", "米", "アメリカ"]
+          
+        end
+        
+        
+        # @kw[0] = ["米国", "米", "アメリカ"]    
+        
+      
+        @kw[1] = ["中国", "中"]
+        
+        @kw[2] = ["ヨーロッパ", "欧州", "欧", "ロシア", "イギリス", "フランス"]
+        
+        @kw[3] = ["韓国", "韓", "朝鮮"]
+        
+        @kw[4] = ["イラン", "シリア", "イラク"]
+        
     
-    return Time.now.strftime("%Y%m%d_%H%M%S")
     
-  end#def get_time_label_now()
+  end#def set_category_names_and_keywords_int()
   
   def get_num_of_docs()
     
@@ -1296,16 +1370,16 @@ class ArticlesController < ApplicationController
         
       end
       
-      write_log("cat.size: #{cat.size}",
-            __FILE__.split("/")[-1],
-            __LINE__.to_s)
+      # write_log("cat.size: #{cat.size}",
+            # __FILE__.split("/")[-1],
+            # __LINE__.to_s)
       
       # cat[0] = []
       # cat[1] = []
       
-      write_log("@kw.length: #{@kw.length}",
-            __FILE__.split("/")[-1],
-            __LINE__.to_s)
+      # write_log("@kw.length: #{@kw.length}",
+            # __FILE__.split("/")[-1],
+            # __LINE__.to_s)
       
       a_tags.each do |item|
         
@@ -1313,21 +1387,21 @@ class ArticlesController < ApplicationController
         
         @kw.length.times do |i|
         
-          write_log("i : #{i}",
-                __FILE__.split("/")[-1],
-                __LINE__.to_s)
+          # write_log("i : #{i}",
+                # __FILE__.split("/")[-1],
+                # __LINE__.to_s)
         
           @kw[i].each do |word|
             
-            write_log("word: #{word}",
-                __FILE__.split("/")[-1],
-                __LINE__.to_s)
+            # write_log("word: #{word}",
+                # __FILE__.split("/")[-1],
+                # __LINE__.to_s)
             
             if item.content.include?(word)
               
-              write_log("item.content: #{item.content} / word: #{word}",
-                  __FILE__.split("/")[-1],
-                  __LINE__.to_s)
+              # write_log("item.content: #{item.content} / word: #{word}",
+                  # __FILE__.split("/")[-1],
+                  # __LINE__.to_s)
               
               item.content = item.content.gsub(word, "<span style='color: green'>#{word}</span>")
               
@@ -1349,9 +1423,9 @@ class ArticlesController < ApplicationController
 
         if is_in == false
           
-          write_log("is_in: #{is_in}",
-              __FILE__.split("/")[-1],
-              __LINE__.to_s)
+          # write_log("is_in: #{is_in}",
+              # __FILE__.split("/")[-1],
+              # __LINE__.to_s)
           
           cat[cat.length - 1].push(item)
           
@@ -1437,6 +1511,6 @@ class ArticlesController < ApplicationController
     
   end#def try_3
 
-
+  #---------  --------------------------------------------
 end
 

@@ -1,3 +1,5 @@
+require 'utils'
+
 class CategoriesController < ApplicationController
   
   layout 'admin'
@@ -43,17 +45,71 @@ class CategoriesController < ApplicationController
   # POST /categories
   # POST /categories.json
   def create
-    @category = Category.new(params[:category])
-
-    respond_to do |format|
-      if @category.save
-        format.html { redirect_to @category, notice: 'Category was successfully created.' }
-        format.json { render json: @category, status: :created, location: @category }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @category.errors, status: :unprocessable_entity }
-      end
+    
+    category = params[:category]
+    category_name = category['name']
+    
+    write_log("category.to_s: #{category.to_s}",
+                __FILE__.split("/")[-1],
+                __LINE__.to_s)
+    
+    cats = []
+    if category_name != nil
+      cats = category_name.split(" ")
     end
+    
+    write_log("cats.size: #{cats.size}",
+                __FILE__.split("/")[-1],
+                __LINE__.to_s)
+
+    if cats.size > 1
+      
+      flag = true
+      counter = 0
+      
+      cats.each do |cat|
+        # @category = Category.new(params[:category])
+        # @category = Category.new(name=cat)
+        @category = Category.new({"name"=> cat, "genre_id"=> category['genre_id']})
+        
+        if @category.save
+        else
+          counter += 1
+        end
+      end#cats.each do |cat|
+      
+      respond_to do |format|
+          format.html { redirect_to @category, 
+                          notice: "New categories: Created => #{cats.size - counter}, Failed => #{counter}" }
+          format.json { render json: @category, status: :created, location: @category }
+      end
+      
+    else#if cats.size > 1
+        @category = Category.new(params[:category])
+    
+        respond_to do |format|
+          if @category.save
+            format.html { redirect_to @category, notice: 'Category was successfully created.' }
+            format.json { render json: @category, status: :created, location: @category }
+          else
+            format.html { render action: "new" }
+            format.json { render json: @category.errors, status: :unprocessable_entity }
+          end
+        end
+    end#if cats.size > 1
+    
+    
+    # @category = Category.new(params[:category])
+# 
+    # respond_to do |format|
+      # if @category.save
+        # format.html { redirect_to @category, notice: 'Category was successfully created.' }
+        # format.json { render json: @category, status: :created, location: @category }
+      # else
+        # format.html { render action: "new" }
+        # format.json { render json: @category.errors, status: :unprocessable_entity }
+      # end
+    # end
   end
 
   # PUT /categories/1
