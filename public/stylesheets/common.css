@@ -1,0 +1,17 @@
+.link {
+	
+	/* REF underline http://www.openspc2.org/HTML/tag/u/faq/001/*/
+	text-decoration:underline;
+	color: blue;
+	/*backgroun-color: yellow;*/
+	/*background-color: #00ff00;*/
+	
+}
+
+table, th, td {
+	border: 2px solid blue;
+}
+
+.table_id {
+	text-align: center;
+}

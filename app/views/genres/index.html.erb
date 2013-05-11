@@ -31,3 +31,32 @@
 		session[:doc_num] => <%= session[:doc_num] %>
 	</dd>
 </dl>
+
+<hr />
+
+<input type="button" value="Show log"   id="show_button" /> |
+<!--
+	REF disabled http://html.eweb-design.com/0903_btn.html
+-->
+<input type="button" value="Hide log"   class="hide_button" disabled/>
+
+<div id="logs" style="display: none;">
+	<a href="#bottom">To bottom</a>
+	<br />
+
+	<% if @contentArray != nil %>
+		<% for i in 0..@contentArray.length - 1 %>
+		
+			<%= @contentArray[i] %><br />
+		
+		<% end %>
+
+	<% else %>
+		
+		<%= @content %>
+	
+	<% end %>		
+	
+	<input type="button" value="Hide log"   class="hide_button" disabled/>
+	
+</div>

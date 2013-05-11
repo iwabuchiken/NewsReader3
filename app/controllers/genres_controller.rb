@@ -7,7 +7,30 @@ class GenresController < ApplicationController
   def index
     @genres = Genre.all
 
+    target = "log.log"
     
+    # @content = "111111111"
+    @content = ""
+    
+    if File.exists?(target)
+      
+      # File.open(target, "r") do |f|
+#         
+        # @contentArray = f.each_line {|line|}
+        # # @content = f.read()
+        # # f.write(content)
+        # # f.write("\n")
+      # end
+
+      # => http://www.ruby-forum.com/topic/66733
+      @contentArray = File.readlines(target)
+
+    else
+      
+      @content = "abcdefg"
+      
+    end
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @genres }

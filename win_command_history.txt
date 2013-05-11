@@ -1,11 +1,11 @@
 a
-cd C:\WORKS\WORKSPACES_APTANA\NewsReader3
-C:\WORKS\PROGRAMS\FreeMind\Freemind.exe C:\WORKS\WORKSPACES_ANDROID\FM\NewsReader3_R\NewsReader3.mm
+pushd C:\WORKS\WS\WS_Android~\NewsReader3
 gitk
 
-rails s --port 3000
+C:\WORKS\PROGRAMS\FreeMind\Freemind.exe C:\WORKS\WORKSPACES_ANDROID\FM\NewsReader3_R\NewsReader3.mm
 
-pushd C:\WORKS\WORKSPACES_APTANA\NewsReader3
+pushd C:\WORKS\WS\WS_Android~\NewsReader3
+rails s --port 3000
 
 
 
@@ -95,7 +95,12 @@ bundle exec rake db:migrate
 
 heroku run rake db:migrate
 
-=======================================================
+[B11_categories-kws-from-DB_V2: 2013/05/11 09:16:04]---------------
+bundle exec rake db:migrate
+
+
+aa
+==================== STORAGE ===================================
 [Add column: Article 20120711_065652]-------------------------------
 # rails generate migration AddColumnCodesToArticle
 # 

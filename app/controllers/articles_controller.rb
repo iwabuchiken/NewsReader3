@@ -38,12 +38,7 @@ class ArticlesController < ApplicationController
       @current_num = number
       
       @params = params
-      
-      # @category_names = ["US", "Others"]
-      # @category_names = ["US", "China", "Others"]
-      # @category_names = ["US", "China", "Europe", "Others"]
-      # @category_names = ["US", "China", "Europe", "Korea", "Others"]
-      
+
       @kw = []
       
       if @genre == "int"
@@ -51,7 +46,71 @@ class ArticlesController < ApplicationController
         set_category_names_and_keywords_int()
         
       elsif @genre == "bus_all"
+        
+        set_category_names_and_keywords_bus()
+        
 
+      elsif @genre == "soci"
+        
+        set_category_names_and_keywords_soci()
+        
+
+        
+      else 
+        @category_names = ["All"]
+      end
+#       
+
+      @objects = try_3(number, @genre)
+      
+      genres_src = Genre.all
+      
+      @genres = {}
+      genres_src.each do |item|
+        @genres[item.name] = item.code
+      end
+      
+
+      #----------------------
+      # 4. Set session objects
+      #----------------------
+      # REF => 黒田・佐藤：322
+      session[:doc_num] = @current_num
+      
+      session[:genre] = @genre
+
+  end#def index
+
+  def set_category_names_and_keywords_soci
+    
+        @category_names = [
+                              #"原発", "事件", "政治"
+                              "Nuclear plants", "Incidents", "Political issues",
+                              "韓国", "中国", "医療/介護", "災害", "Others"
+                              ]
+        
+        # @kw[0] = ["原発", "福島", "", "東電", "東京電力", "原子力"]
+        @kw[0] = ["原発", "福島", "東電", "東京電力", "原子力"] 
+        
+        # Incidents
+        @kw[1] = ["殺人", "傷害", "盗撮", "事件", "逮捕", "いじめ", "女性"]
+        
+        @kw[2] = ["首相", "市長", "選挙"]
+        
+        @kw[3] = ["韓国", "竹島"]
+        
+        # 中国
+        @kw[4] = ["中国", "尖閣", "日中"]
+        
+        # 医療/介護
+        @kw[5] = ["介護", "がん", "感染", "食中毒", "けが", "出生", "風邪", "妊娠"]
+        
+        # 災害
+        @kw[6] = ["防災", "高温", "津波"]    
+    
+  end#def set_category_names_and_keywords_soci
+
+  def set_category_names_and_keywords_bus
         @category_names = [
                           "US", "China", "Europe", 
                           "Korea", "Middle east",
@@ -94,99 +153,9 @@ class ArticlesController < ApplicationController
         @kw[7] = ["ガソリン", "ソーラー", "原油", "原発", "石油", "エネルギー", "発電", "火力"]
         
         @kw[8] = ["証券", "相場", "円", "日経平均", "ＥＵＲＩＢＯＲ"]
-    
-      elsif @genre == "soci"
         
-        @category_names = [
-                              #"原発", "事件", "政治"
-                              "Nuclear plants", "Incidents", "Political issues",
-                              "韓国", "中国", "医療/介護", "災害", "Others"
-                              ]
-        
-        # @kw[0] = ["原発", "福島", "", "東電", "東京電力", "原子力"]
-        @kw[0] = ["原発", "福島", "東電", "東京電力", "原子力"] 
-        
-        # Incidents
-        @kw[1] = ["殺人", "傷害", "盗撮", "事件", "逮捕", "いじめ", "女性"]
-        
-        @kw[2] = ["首相", "市長", "選挙"]
-        
-        @kw[3] = ["韓国", "竹島"]
-        
-        # 中国
-        @kw[4] = ["中国", "尖閣", "日中"]
-        
-        # 医療/介護
-        @kw[5] = ["介護", "がん", "感染", "食中毒", "けが", "出生", "風邪", "妊娠"]
-        
-        # 災害
-        @kw[6] = ["防災", "高温", "津波"]
-        
-      else 
-        @category_names = ["All"]
-      end
-#       
-
-      @objects = try_3(number, @genre)
-      
-      #//----------- try_2 -----------------
-      # @objects = try_1(number)
-      # @objects = try_2(number, @genre)
-#       
-      # @current_num = number
-#       
-      # @params = params
-#       
-      # @category_names = ["abc", "def"]
-#       
-      
-      # #//----------- try_1 -----------------
-      # # @objects = try_1(number)
-      # @objects = try_1(number, @genre)
-#       
-      # @current_num = number
-#       
-      # @params = params
-      
-      
-      #----------------------
-      # 3-2. Set "@genres"
-      #----------------------
-      # @genres = {"Society" => "soci", "Overseas" => "int", "Economics" => "bus_all"}
-      
-      # @genres_src = Genre.all
-      genres_src = Genre.all
-      
-      @genres = {}
-      genres_src.each do |item|
-        @genres[item.name] = item.code
-      end
-      
-      # @genres_src2 = {}
-      # @genres_src.each do |item|
-        # @genres_src2[item.name] = item.code
-      # end#genres_src.each do |item|
-      
-      #----------------------
-      # 4. Set session objects
-      #----------------------
-      # REF => 黒田・佐藤：322
-      session[:doc_num] = @current_num
-      
-      session[:genre] = @genre
-
-      
-      # @objects = try_1()
-        
-      # # @result = BASICS.is_numeric?(111)
-      # @result = BASICS.is_numeric?(params['doc_num'])
-#       
-      # # flash['notice'] = @result.to_s
-      # flash['result'] = @result.to_s
-      # # @result = is_numeric?(111)
-      
-  end
-
+  end#def set_category_names_and_keywords_bus
+  
   # GET /articles/1
   # GET /articles/1.json
   def show

@@ -20,6 +20,9 @@
 		});		
 	</script>
 	
+	<%= stylesheet_link_tag    "/stylesheets/common" %>
+	<%= javascript_include_tag "/javascript/admin" %>
+	
 </head>
 <body>
 
@@ -29,6 +32,6 @@
 <%#= link_to "Back to articles", articles_path, {:doc_num => session[:doc_num]} %>
 
 	<%= render :partial => "layouts/admin_footer" %>
-
+<a name="bottom"></a>
 </body>
 </html>

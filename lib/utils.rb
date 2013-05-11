@@ -1,6 +1,7 @@
 def get_time_label_now()
   
-  return Time.now.strftime("%Y%m%d_%H%M%S")
+  return Time.now.strftime("%Y/%m/%d %H:%M:%S")
+  # return Time.now.strftime("%Y%m%d_%H%M%S")
   
 end#def get_time_label_now()
 
