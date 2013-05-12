@@ -4,6 +4,8 @@ gitk
 
 C:\WORKS\PROGRAMS\FreeMind\Freemind.exe C:\WORKS\WORKSPACES_ANDROID\FM\NewsReader3_R\NewsReader3.mm
 
+a p && pushd C:\WORKS\WS\WS_Android~\NewsReader3 && rails s --port 3000
+
 pushd C:\WORKS\WS\WS_Android~\NewsReader3
 rails s --port 3000
 
@@ -96,7 +98,61 @@ bundle exec rake db:migrate
 heroku run rake db:migrate
 
 [B11_categories-kws-from-DB_V2: 2013/05/11 09:16:04]---------------
-bundle exec rake db:migrate
+#bundle exec rake db:migrate
+#g p origin master
+
+gem install heroku --no-ri --no-rdoc
+
+	Fetching: heroku-2.39.2.gem (100%)
+	 !    The `heroku` gem has been deprecated and replaced with the Heroku Toolbelt
+	.
+	 !    Download and install from: https://toolbelt.heroku.com
+	 !    For API access, see: https://github.com/heroku/heroku.rb
+	Successfully installed heroku-2.39.2
+	1 gem installed
+
+#heroku keys:add
+
+	Found existing public key: C:/Users/IwabuchiKen/.ssh/id_rsa.pub
+	Uploading SSH public key C:/Users/IwabuchiKen/.ssh/id_rsa.pub... done
+
+#heroku create --stack cedar
+
+	Creating lit-coast-7114... done, region is us
+	http://lit-coast-7114.herokuapp.com/ | git@heroku.com:lit-coast-7114.git
+	Git remote heroku added
+
+#heroku rename cosmos-nr4
+
+	Renaming lit-coast-7114 to cosmos-nr4... done
+	http://cosmos-nr4.herokuapp.com/ | git@heroku.com:cosmos-nr4.git
+	Git remote heroku updated
+
+#g p heroku master
+
+#heroku open
+
+	"We're sorry, but something went wrong."
+
+#heroku logs
+
+	2013-05-11T10:36:46.268116+00:00 app[web.1]: LINE 4:              WHERE a.attrel
+	id = '"genres"'::regclass
+	2013-05-11T10:36:46.268116+00:00 app[web.1]: ActiveRecord::StatementInvalid (PGE
+	rror: ERROR:  relation "genres" does not exist
+	2013-05-11T10:36:46.268116+00:00 app[web.1]:
+
+heroku run rake db:migrate
+
+[B11_categories-kws-from-DB_V2: v-1.1: 2013/05/11 09:16:04]---------------
+#heroku logs
+	2013-05-11T10:44:25.309540+00:00 app[web.1]: NoMethodError (undefined method `pu
+	sh' for nil:NilClass):
+	2013-05-11T10:44:25.308495+00:00 app[web.1]: Completed 500 Internal Server Error
+	 in 2933ms
+	2013-05-11T10:44:25.309540+00:00 app[web.1]:   app/controllers/articles_controll
+	er.rb:1247:in `each'
+
 
 
 aa

@@ -13,9 +13,14 @@ def write_log(text, file, line)
   f.write("[begin]------------------------=\n")
   
   # f.write("[#{get_time_label_now()}]" + line + ": " + text)
-  f.write("[#{get_time_label_now()}] [#{file}: #{line}] #{text}")
+  f.write("[#{get_time_label_now()}] [#{file}: #{line}]\n")
+  # f.write("\n#{text}")
+  # f.write("\n")
+  # f.write("\n\nyes")
+  f.write(text)
   
   f.write("\n")
+  # f.write("<br/>")
   
   f.write("------------------------=[end]\n\n")
   

@@ -35,3 +35,1356 @@ categorize_new3_soci(a_tags)----------------------
 [2013/05/11 18:10:52] [articles_controller.rb: 1018] genre != nil => Overseas
 ------------------------=[end]
 
+[begin]------------------------=
+[2013/05/11 19:46:04] [articles_controller.rb: 1310] 
+
+categorize_new3_soci(a_tags)----------------------
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 19:46:08] [articles_controller.rb: 1018] genre != nil => Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 19:48:53] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1111] number=3
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 19:48:54] [articles_controller.rb: 1316] 
+
+categorize_new3_soci(a_tags)----------------------
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 19:50:02] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1111] number=3
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 19:50:03] [articles_controller.rb: 1316] 
+
+categorize_new3_soci(a_tags)----------------------
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 19:51:07] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1111] number=3
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 19:51:08] [articles_controller.rb: 1316] 
+
+categorize_new3_soci(a_tags)----------------------
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 19:52:14] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1111] number=3
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 19:52:15] [articles_controller.rb: 1316] 
+
+categorize_new3_soci(a_tags)----------------------
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 19:55:07] [articles_controller.rb: 1114] number=3
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 19:55:08] [articles_controller.rb: 1319] 
+
+categorize_new3_soci(a_tags)----------------------
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 19:56:30] [articles_controller.rb: 1114] number=3
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 19:56:31] [articles_controller.rb: 1319] 
+
+categorize_new3_soci(a_tags)----------------------
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 19:56:48] [articles_controller.rb: 1114] number=3
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 19:56:49] [articles_controller.rb: 1319] 
+
+categorize_new3_soci(a_tags)----------------------
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 19:57:14] [articles_controller.rb: 1115] 
+number=3
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 19:57:15] [articles_controller.rb: 1320] 
+
+categorize_new3_soci(a_tags)----------------------
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 19:57:38] [articles_controller.rb: 1115] 
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 19:57:40] [articles_controller.rb: 1320] 
+
+categorize_new3_soci(a_tags)----------------------
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 21:04:36] [articles_controller.rb: 1115] 
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 21:04:36] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1135] soci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 21:04:37] [articles_controller.rb: 1332] 
+
+categorize_new3_soci(a_tags)----------------------
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 21:05:53] [articles_controller.rb: 1115] 
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 21:05:53] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1135] soci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 21:05:54] [articles_controller.rb: 1332] 
+
+categorize_new3_soci(a_tags)----------------------
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 21:07:29] [articles_controller.rb: 1115] 
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 21:07:29] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1135] soci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 21:07:30] [articles_controller.rb: 1332] 
+
+categorize_new3_soci(a_tags)----------------------
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 21:08:40] [articles_controller.rb: 1115] 
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 21:08:40] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1135] soci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/11 21:08:41] [articles_controller.rb: 1332] 
+
+categorize_new3_soci(a_tags)----------------------
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:14:07] [articles_controller.rb: 1115]
+
+
+
+yes
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:14:07] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1135]
+
+
+
+yessoci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:14:09] [articles_controller.rb: 1332]
+
+
+
+yes
+
+categorize_new3_soci(a_tags)----------------------
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:15:42] [articles_controller.rb: 1123]
+
+
+
+yes
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:15:42] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1143]
+
+
+
+yessoci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:15:53] [articles_controller.rb: 1123]
+
+
+
+yes
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:15:53] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1143]
+
+
+
+yessoci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:15:53] [articles_controller.rb: 39]
+
+
+
+yes
+genre=soci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:15:55] [articles_controller.rb: 1340]
+
+
+
+yes
+
+categorize_new3_soci(a_tags)----------------------
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:15:57] [articles_controller.rb: 1123]
+
+
+
+yes
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:15:57] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1143]
+
+
+
+yessoci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:15:57] [articles_controller.rb: 39]
+
+
+
+yes
+genre=soci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:15:59] [articles_controller.rb: 1340]
+
+
+
+yes
+
+categorize_new3_soci(a_tags)----------------------
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:16:31] [articles_controller.rb: 1123]
+
+
+
+yes
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:16:31] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1143]
+
+
+
+yessoci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:16:31] [articles_controller.rb: 39]
+
+
+
+yes
+genre=soci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:16:32] [articles_controller.rb: 1340]
+
+
+
+yes
+
+categorize_new3_soci(a_tags)----------------------
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:17:08] [articles_controller.rb: 1123]
+
+
+
+yes
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:17:08] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1143]
+
+
+
+yessoci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:17:08] [articles_controller.rb: 39]
+
+
+
+yes
+genre=soci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:17:09] [articles_controller.rb: 1340]
+
+
+
+yes
+
+categorize_new3_soci(a_tags)----------------------
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:17:15] [articles_controller.rb: 1123]
+
+
+
+yes
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:17:15] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1143]
+
+
+
+yessoci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:17:15] [articles_controller.rb: 39]
+
+
+
+yes
+genre=soci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:17:17] [articles_controller.rb: 1340]
+
+
+
+yes
+
+categorize_new3_soci(a_tags)----------------------
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:20:18] [articles_controller.rb: 1123]
+
+
+
+yes
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:20:18] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1143]
+
+
+
+yessoci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:20:18] [articles_controller.rb: 39]
+
+
+
+yes
+genre=soci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:20:19] [articles_controller.rb: 1340]
+
+
+
+yes
+
+categorize_new3_soci(a_tags)----------------------
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:23:26] [articles_controller.rb: 1123]
+
+
+
+yes
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:23:26] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1143]
+
+
+
+yessoci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:23:26] [articles_controller.rb: 39]
+
+
+
+yes
+genre=soci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:23:27] [articles_controller.rb: 1340]
+
+
+
+yes
+
+categorize_new3_soci(a_tags)----------------------
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:28:22] [articles_controller.rb: 1123]
+
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:28:22] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1143]
+soci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:28:22] [articles_controller.rb: 39]
+
+genre=soci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:28:24] [articles_controller.rb: 1340]
+
+
+categorize_new3_soci(a_tags)----------------------
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:35:33] [articles_controller.rb: 1139]
+
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:35:33] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1159]
+soci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:35:33] [articles_controller.rb: 39]
+genre=soci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:35:33] [articles_controller.rb: 64]
+params_content=(action=>index)(controller=>articles)
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:35:34] [articles_controller.rb: 1356]
+
+
+categorize_new3_soci(a_tags)----------------------
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:38:28] [articles_controller.rb: 1145]
+
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:38:28] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1165]
+soci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:38:28] [articles_controller.rb: 39]
+genre=soci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:38:28] [articles_controller.rb: 64]
+params_content=(action=>index)(controller=>articles)
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:38:30] [articles_controller.rb: 1362]
+
+
+categorize_new3_soci(a_tags)----------------------
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:38:56] [articles_controller.rb: 1145]
+
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:38:56] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1165]
+int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:38:56] [articles_controller.rb: 39]
+genre=int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:38:56] [articles_controller.rb: 64]
+params_content=(utf8=>✓)(doc_num=>5)(genre=>int)(commit=>Go)(action=>index)(controller=>articles)
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:39:35] [articles_controller.rb: 1145]
+
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:39:35] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1165]
+soci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:39:35] [articles_controller.rb: 39]
+genre=soci
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:39:35] [articles_controller.rb: 64]
+params_content=(action=>index)(controller=>articles)
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:39:38] [articles_controller.rb: 1362]
+
+
+categorize_new3_soci(a_tags)----------------------
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:39:44] [articles_controller.rb: 1145]
+
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:39:44] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1165]
+int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:39:44] [articles_controller.rb: 39]
+genre=int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:39:44] [articles_controller.rb: 64]
+params_content=(utf8=>✓)(doc_num=>5)(genre=>int)(commit=>Go)(action=>index)(controller=>articles)
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:39:44] [articles_controller.rb: 1038]
+genre.name =>Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:39:44] [articles_controller.rb: 1048]
+genre != nil => Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:39:56] [articles_controller.rb: 1145]
+
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:39:56] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1165]
+int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:39:56] [articles_controller.rb: 39]
+genre=int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:39:56] [articles_controller.rb: 64]
+params_content=(utf8=>✓)(doc_num=>5)(genre=>int)(commit=>Go)(action=>index)(controller=>articles)
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:39:56] [articles_controller.rb: 1038]
+genre.name =>Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:39:56] [articles_controller.rb: 1048]
+genre != nil => Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:43:35] [categories_controller.rb: 54]
+category.to_s: {"name"=>"US", "genre_id"=>"2"}
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:43:35] [categories_controller.rb: 63]
+cats.size: 1
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:43:41] [articles_controller.rb: 1145]
+
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:43:41] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1165]
+int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:43:41] [articles_controller.rb: 39]
+genre=int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:43:41] [articles_controller.rb: 64]
+params_content=(utf8=>✓)(doc_num=>5)(genre=>int)(commit=>Go)(action=>index)(controller=>articles)
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:43:41] [articles_controller.rb: 1038]
+genre.name =>Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:43:41] [articles_controller.rb: 1048]
+genre != nil => Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:45:46] [articles_controller.rb: 1166]
+
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:45:46] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1186]
+int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:45:46] [articles_controller.rb: 39]
+genre=int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:45:46] [articles_controller.rb: 64]
+params_content=(utf8=>✓)(doc_num=>5)(genre=>int)(commit=>Go)(action=>index)(controller=>articles)
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:45:46] [articles_controller.rb: 1038]
+genre.name =>Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:45:46] [articles_controller.rb: 1048]
+genre != nil => Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:45:46] [articles_controller.rb: 1057]
+categories.size=1
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:48:50] [articles_controller.rb: 1180]
+
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:48:50] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1200]
+int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:48:50] [articles_controller.rb: 39]
+genre=int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:48:50] [articles_controller.rb: 64]
+params_content=(utf8=>✓)(doc_num=>5)(genre=>int)(commit=>Go)(action=>index)(controller=>articles)
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:48:50] [articles_controller.rb: 1038]
+genre.name =>Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:48:50] [articles_controller.rb: 1048]
+genre != nil => Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:48:50] [articles_controller.rb: 1057]
+categories.size=1
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:48:50] [articles_controller.rb: 1106]
+category.name=US
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:48:50] [articles_controller.rb: 1115]
+kws.size=0
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:50:53] [articles_controller.rb: 1187]
+
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:50:53] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1207]
+int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:50:53] [articles_controller.rb: 39]
+genre=int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:50:53] [articles_controller.rb: 64]
+params_content=(utf8=>✓)(doc_num=>5)(genre=>int)(commit=>Go)(action=>index)(controller=>articles)
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:50:53] [articles_controller.rb: 1038]
+genre.name =>Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:50:53] [articles_controller.rb: 1048]
+genre != nil => Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:50:53] [articles_controller.rb: 1057]
+categories.size=1
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:50:53] [articles_controller.rb: 1102]
+@category_names.size=2
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:50:53] [articles_controller.rb: 1112]
+category.name=US
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:50:53] [articles_controller.rb: 1121]
+kws.size=0
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:15] [articles_controller.rb: 1268]
+
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:15] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1288]
+int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:15] [articles_controller.rb: 39]
+genre=int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:15] [articles_controller.rb: 64]
+params_content=(utf8=>✓)(doc_num=>5)(genre=>int)(commit=>Go)(action=>index)(controller=>articles)
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:15] [articles_controller.rb: 118]
+genre.name =>Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:15] [articles_controller.rb: 128]
+genre != nil => Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:15] [articles_controller.rb: 137]
+categories.size=1
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:15] [articles_controller.rb: 182]
+category_names.size=2
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:15] [articles_controller.rb: 1193]
+category.name=US
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:15] [articles_controller.rb: 1202]
+kws.size=0
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:18] [articles_controller.rb: 1268]
+
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:18] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1288]
+int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:18] [articles_controller.rb: 39]
+genre=int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:18] [articles_controller.rb: 64]
+params_content=(utf8=>✓)(doc_num=>5)(genre=>int)(commit=>Go)(action=>index)(controller=>articles)
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:18] [articles_controller.rb: 118]
+genre.name =>Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:18] [articles_controller.rb: 128]
+genre != nil => Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:18] [articles_controller.rb: 137]
+categories.size=1
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:18] [articles_controller.rb: 182]
+category_names.size=2
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:18] [articles_controller.rb: 1193]
+category.name=US
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:18] [articles_controller.rb: 1202]
+kws.size=0
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:56] [articles_controller.rb: 1275]
+
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:56] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1295]
+int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:56] [articles_controller.rb: 39]
+genre=int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:56] [articles_controller.rb: 64]
+params_content=(utf8=>✓)(doc_num=>5)(genre=>int)(commit=>Go)(action=>index)(controller=>articles)
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:56] [articles_controller.rb: 125]
+genre.name =>Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:56] [articles_controller.rb: 135]
+genre != nil => Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:56] [articles_controller.rb: 144]
+categories.size=1
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:56:56] [articles_controller.rb: 189]
+category_names.size=2
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:57:12] [articles_controller.rb: 1275]
+
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:57:12] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1295]
+int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:57:12] [articles_controller.rb: 39]
+genre=int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:57:12] [articles_controller.rb: 64]
+params_content=(utf8=>✓)(doc_num=>5)(genre=>int)(commit=>Go)(action=>index)(controller=>articles)
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:57:12] [articles_controller.rb: 125]
+genre.name =>Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:57:12] [articles_controller.rb: 135]
+genre != nil => Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:57:12] [articles_controller.rb: 144]
+categories.size=1
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:57:12] [articles_controller.rb: 189]
+category_names.size=2
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:57:12] [articles_controller.rb: 77]
+@category_names.size=2
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:57:12] [articles_controller.rb: 1200]
+category.name=US
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 14:57:12] [articles_controller.rb: 1209]
+kws.size=0
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:00:16] [articles_controller.rb: 1208]
+
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:00:16] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1228]
+int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:00:16] [articles_controller.rb: 39]
+genre=int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:00:16] [articles_controller.rb: 64]
+params_content=(utf8=>✓)(doc_num=>5)(genre=>int)(commit=>Go)(action=>index)(controller=>articles)
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:00:16] [articles_controller.rb: 125]
+genre.name =>Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:00:16] [articles_controller.rb: 135]
+genre != nil => Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:00:16] [articles_controller.rb: 144]
+categories.size=1
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:00:16] [articles_controller.rb: 189]
+category_names.size=2
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:00:16] [articles_controller.rb: 77]
+@category_names.size=2
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:00:16] [articles_controller.rb: 1126]
+category.name=US
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:00:16] [articles_controller.rb: 1135]
+kws.size=0
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:00:29] [articles_controller.rb: 1208]
+
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:00:29] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1228]
+int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:00:29] [articles_controller.rb: 39]
+genre=int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:00:29] [articles_controller.rb: 64]
+params_content=(utf8=>✓)(doc_num=>5)(genre=>int)(commit=>Go)(action=>index)(controller=>articles)
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:00:29] [articles_controller.rb: 125]
+genre.name =>Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:00:29] [articles_controller.rb: 135]
+genre != nil => Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:00:29] [articles_controller.rb: 144]
+categories.size=1
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:00:29] [articles_controller.rb: 189]
+category_names.size=2
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:00:29] [articles_controller.rb: 77]
+@category_names.size=2
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:00:29] [articles_controller.rb: 1126]
+category.name=US
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:00:29] [articles_controller.rb: 1135]
+kws.size=0
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:01:30] [articles_controller.rb: 1210]
+
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:01:30] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1230]
+int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:01:30] [articles_controller.rb: 39]
+genre=int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:01:30] [articles_controller.rb: 64]
+params_content=(utf8=>✓)(doc_num=>5)(genre=>int)(commit=>Go)(action=>index)(controller=>articles)
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:01:30] [articles_controller.rb: 125]
+genre.name =>Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:01:30] [articles_controller.rb: 135]
+genre != nil => Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:01:30] [articles_controller.rb: 144]
+categories.size=1
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:01:30] [articles_controller.rb: 189]
+category_names.size=2
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:01:30] [articles_controller.rb: 77]
+@category_names.size=2
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:02:05] [articles_controller.rb: 1210]
+
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:02:05] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1230]
+int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:02:05] [articles_controller.rb: 39]
+genre=int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:02:05] [articles_controller.rb: 64]
+params_content=(utf8=>✓)(doc_num=>5)(genre=>int)(commit=>Go)(action=>index)(controller=>articles)
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:02:05] [articles_controller.rb: 125]
+genre.name =>Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:02:05] [articles_controller.rb: 135]
+genre != nil => Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:02:05] [articles_controller.rb: 144]
+categories.size=1
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:02:05] [articles_controller.rb: 189]
+category_names.size=2
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:02:05] [articles_controller.rb: 77]
+@category_names.size=2
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:02:05] [articles_controller.rb: 1128]
+category.name=US
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:02:05] [articles_controller.rb: 1137]
+kws.size=0
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:03:14] [articles_controller.rb: 1210]
+
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:03:14] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1230]
+int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:03:14] [articles_controller.rb: 39]
+genre=int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:03:14] [articles_controller.rb: 64]
+params_content=(utf8=>✓)(doc_num=>5)(genre=>int)(commit=>Go)(action=>index)(controller=>articles)
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:03:14] [articles_controller.rb: 125]
+genre.name =>Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:03:14] [articles_controller.rb: 135]
+genre != nil => Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:03:14] [articles_controller.rb: 144]
+categories.size=1
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:03:14] [articles_controller.rb: 189]
+category_names.size=2
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:03:14] [articles_controller.rb: 77]
+@category_names.size=2
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:03:14] [articles_controller.rb: 1128]
+category.name=US
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:03:14] [articles_controller.rb: 1137]
+kws.size=0
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:04:58] [articles_controller.rb: 1224]
+
+number=5
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:04:58] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1244]
+int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:04:58] [articles_controller.rb: 39]
+genre=int
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:04:58] [articles_controller.rb: 64]
+params_content=(utf8=>✓)(doc_num=>5)(genre=>int)(commit=>Go)(action=>index)(controller=>articles)
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:04:58] [articles_controller.rb: 139]
+genre.name =>Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:04:58] [articles_controller.rb: 149]
+genre != nil => Overseas
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:04:58] [articles_controller.rb: 158]
+categories.size=1
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:04:58] [articles_controller.rb: 203]
+category_names.size=2
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:04:58] [articles_controller.rb: 78]
+@category_names.size=2
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:04:58] [articles_controller.rb: 1142]
+category.name=US
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:04:58] [articles_controller.rb: 1151]
+kws.size=0
+------------------------=[end]
+
+[begin]------------------------=
+[2013/05/12 15:04:58] [articles_controller.rb: 93]
+米国/米/アメリカ/
+------------------------=[end]
+

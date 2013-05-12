@@ -30,7 +30,16 @@ class ArticlesController < ApplicationController
       # 2. Set genre
       #----------------------
       @genre = get_genre()
-            
+      
+      #debug
+      write_log(
+                "genre=" + @genre,  
+                # __FILE__,
+                __FILE__.split("/")[-1],
+                __LINE__.to_s)
+
+
+      
       #----------------------
       # 3. Get objects
       #----------------------
@@ -39,12 +48,50 @@ class ArticlesController < ApplicationController
       
       @params = params
 
+      #debug
+      params_content = ""
+      
+      params.each_pair {|k, v|
+        
+        params_content += "(" + k + "=>" + v + ")"
+        
+      }
+      
+      write_log(
+                "params_content=" + params_content,  
+                # __FILE__,
+                __FILE__.split("/")[-1],
+                __LINE__.to_s)      
+
+
+
       @kw = []
       
       if @genre == "int"
+          
+          @category_names = _get_category_names_int()
+          
+          write_log(
+                "@category_names.size=" + @category_names.size.to_s,  
+                # __FILE__,
+                __FILE__.split("/")[-1],
+                __LINE__.to_s)      
 
-        set_category_names_and_keywords_int()
-        
+          @kw = set_category_names_and_keywords_int()
+          
+          #debug
+          msg = ""
+          @kw[0].each {|k|
+            msg += k + "/"
+          }
+          
+          
+          write_log(
+                msg,  
+                # __FILE__,
+                __FILE__.split("/")[-1],
+                __LINE__.to_s)
+                      
       elsif @genre == "bus_all"
         
         set_category_names_and_keywords_bus()
@@ -80,6 +127,85 @@ class ArticlesController < ApplicationController
       session[:genre] = @genre
 
   end#def index
+
+  def _get_category_names_int()
+    
+      genre = Genre.find_by_code("int")
+        
+      write_log(
+              "genre.name =>" + genre.name, 
+              # __FILE__,
+              __FILE__.split("/")[-1],
+              __LINE__.to_s)
+      
+      if genre != nil
+        
+        categories = Category.find_all_by_genre_id(genre.id)
+        
+        write_log(
+              "genre != nil => #{genre.name}", 
+              # __FILE__,
+              __FILE__.split("/")[-1],
+              __LINE__.to_s)
+        
+        #debug
+        if categories != nil
+          
+            write_log(
+              "categories.size=" + categories.size.to_s, 
+              # __FILE__,
+              __FILE__.split("/")[-1],
+              __LINE__.to_s)
+
+              
+        else
+          
+            write_log(
+                "categories => nil", 
+                # __FILE__,
+                __FILE__.split("/")[-1],
+                __LINE__.to_s)
+          
+        end
+        
+        
+      else
+        
+        write_log(
+              "genre == nil", 
+              # __FILE__,
+              __FILE__.split("/")[-1],
+              __LINE__.to_s)
+
+
+        
+        # render :text "Genre wasn't found by the code 'int'"
+        
+      end
+      
+      # categories = Category.find_all_by_genre_id(3)
+      
+      category_names = []
+      
+      categories.each do |cat|
+        
+          category_names.append(cat.name)
+        
+      end
+      
+      category_names.append("Others")
+      
+      #debug
+      write_log(
+                "category_names.size=" + category_names.size.to_s, 
+                # __FILE__,
+                __FILE__.split("/")[-1],
+                __LINE__.to_s)
+        
+      
+      return category_names
+      
+  end#def _get_category_names_int()
 
   def set_category_names_and_keywords_soci
     
@@ -1002,66 +1128,49 @@ class ArticlesController < ApplicationController
   # end#def get_time_label_now()
   
   def set_category_names_and_keywords_int()
-        # @category_names = ["US", "China", "Europe", "Korea", "Middle east", "Others"]
         
-        # categories = Category.find(:all, :genre_id => 3)
-        genre = Genre.find_by_code("int")
-        
-        if genre != nil
-          
-          categories = Category.find_all_by_genre_id(genre.id)
-          
-          write_log(
-                "genre != nil => #{genre.name}", 
-                # __FILE__,
-                __FILE__.split("/")[-1],
-                __LINE__.to_s)
-          
-        else
-          
-          write_log(
-                "genre == nil", 
-                # __FILE__,
-                __FILE__.split("/")[-1],
-                __LINE__.to_s)
-
-          
-          # render :text "Genre wasn't found by the code 'int'"
-          
-        end
-        
-        # categories = Category.find_all_by_genre_id(3)
-        
-        @category_names = []
-        
-        categories.each do |cat|
-          
-          @category_names.append(cat.name)
-          
-        end
-        
-        @category_names.append("Others")
-        
+        kw = []
         
         category = Category.find_by_name("US")
         
         if category != nil
           
-          kws = Keyword.find_all_by_category_id(category.id)
-          
-          @kw[0] = []
-          
-          kws.each do |kw|
+            write_log(
+                  "category.name=" + category.name, 
+                  # __FILE__,
+                  __FILE__.split("/")[-1],
+                  __LINE__.to_s)
+
             
-            @kw[0].append(kw.name)
+            kws = Keyword.find_all_by_category_id(category.id)
+
+            write_log(
+                  "kws.size=" + kws.size.to_s, 
+                  # __FILE__,
+                  __FILE__.split("/")[-1],
+                  __LINE__.to_s)
+
+                  
+            kw[0] = []
             
-          end
-          
-           
-          
+            # Set keywords
+            if (kws == nil) or (kws.size == 0)
+                
+                kw[0] = ["米国", "米", "アメリカ"]
+                
+            else
+              
+                kws.each do |kw|
+                  
+                  kw[0].append(kw.name)
+                  
+                end
+              
+            end
+            
         else
           
-          @kw[0] = ["米国", "米", "アメリカ"]
+          kw[0] = ["米国", "米", "アメリカ"]
           
         end
         
@@ -1069,24 +1178,28 @@ class ArticlesController < ApplicationController
         # @kw[0] = ["米国", "米", "アメリカ"]    
         
       
-        @kw[1] = ["中国", "中"]
+        kw[1] = ["中国", "中"]
         
-        @kw[2] = ["ヨーロッパ", "欧州", "欧", "ロシア", "イギリス", "フランス"]
+        kw[2] = ["ヨーロッパ", "欧州", "欧", "ロシア", "イギリス", "フランス"]
         
-        @kw[3] = ["韓国", "韓", "朝鮮"]
+        kw[3] = ["韓国", "韓", "朝鮮"]
         
-        @kw[4] = ["イラン", "シリア", "イラク"]
+        kw[4] = ["イラン", "シリア", "イラク"]
         
-    
+        return kw
     
   end#def set_category_names_and_keywords_int()
   
   def get_num_of_docs()
     
       if params['doc_num'] != nil
+        
         doc_num = params['doc_num']
+        
       elsif session[:doc_num] != nil
+        
         doc_num = session[:doc_num]
+        
       else
         doc_num = nil
       end
@@ -1104,6 +1217,12 @@ class ArticlesController < ApplicationController
         
       end
       
+      # write_log("number=" + number.to_s, __FILE__, __LINE__)
+      # write_log("number=" + number.to_s, 
+      write_log("\nnumber=" + number.to_s, 
+                __FILE__.split("/")[-1],
+                __LINE__.to_s)
+
       return number
 
   end#def get_num_of_docs()
@@ -1111,15 +1230,27 @@ class ArticlesController < ApplicationController
   def get_genre()
 
       if params['genre']
+        
         p_genre = params['genre']
+        
       else
+        
         p_genre = session[:genre]
+        
       end
       
       if p_genre != nil
+        
+        write_log(p_genre, __FILE__, __LINE__)
+        
         return p_genre
+        
       else
+        
+        write_log("soci", __FILE__, __LINE__)
+        
         return "soci"
+        
       end
 
   end#def get_genre()
