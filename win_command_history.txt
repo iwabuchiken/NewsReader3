@@ -1,4 +1,8 @@
 a
+a p && pushd C:\WORKS\WS\WS_Android~\NewsReader3 && gitk
+
+pushd C:\WORKS\WS\WS_Android~\NewsReader3 && gitk
+
 pushd C:\WORKS\WS\WS_Android~\NewsReader3
 gitk
 

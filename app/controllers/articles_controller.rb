@@ -48,21 +48,21 @@ class ArticlesController < ApplicationController
       
       @params = params
 
-      #debug
-      params_content = ""
-      
-      params.each_pair {|k, v|
-        
-        params_content += "(" + k + "=>" + v + ")"
-        
-      }
-      
-      write_log(
-                "params_content=" + params_content,  
-                # __FILE__,
-                __FILE__.split("/")[-1],
-                __LINE__.to_s)      
-
+      # #debug
+      # params_content = ""
+#       
+      # params.each_pair {|k, v|
+#         
+        # params_content += "(" + k + "=>" + v + ")"
+#         
+      # }
+#       
+      # write_log(
+                # "params_content=" + params_content,  
+                # # __FILE__,
+                # __FILE__.split("/")[-1],
+                # __LINE__.to_s)      
+# 
 
 
       @kw = []
@@ -79,18 +79,19 @@ class ArticlesController < ApplicationController
 
           @kw = set_category_names_and_keywords_int()
           
-          #debug
-          msg = ""
-          @kw[0].each {|k|
-            msg += k + "/"
-          }
-          
-          
-          write_log(
-                msg,  
-                # __FILE__,
-                __FILE__.split("/")[-1],
-                __LINE__.to_s)
+          # #debug
+          # msg = ""
+          # @kw[0].each {|k|
+              # msg += k + "/"
+          # }
+#           
+#           
+          # write_log(
+                # msg,  
+                # # __FILE__,
+                # __FILE__.split("/")[-1],
+                # __LINE__.to_s)
+#                               => 米国/米/アメリカ/ 
                       
       elsif @genre == "bus_all"
         
@@ -355,51 +356,144 @@ class ArticlesController < ApplicationController
   
   private #==========================================
     # ============ try_1 => From: try_nokogiri_17 ========================
-	def get_atags(docs)
-#    # Get doc
-#    docs = get_docs(5)
-#    
-#    #meta_tags
-#    meta_tags = nil
-#    
-#    # New docs
-#    docs_new = []
-
-    # href a tags
-    a_tags_href = []
-    
-    # Modify
-    docs.each do |doc|
-      #--------------------
-      # Modify 'a' tags
-      #--------------------
+  def get_atags(docs)
+  #    # Get doc
+  #    docs = get_docs(5)
+  #    
+  #    #meta_tags
+  #    meta_tags = nil
+  #    
+  #    # New docs
+  #    docs_new = []
+  
+      # href a tags
+      a_tags_href = []
       
-      # Get 'a' tags
-      a_tags = doc.css("div ul li a")
+      vendor_list = []
       
-      # href value
-      a_tags.each do |a_tag|
-        if a_tag['href'].start_with?("/hl?")
-          # Modify url
-          a_tag['href'] = "http://headlines.yahoo.co.jp" + a_tag['href']
-          
-          # Add
-          a_tags_href.push(a_tag)
-          
-        end#if a_tag['href'].start_with?("/hl?")
-      end#a_tags.each do |a_tag|
+      #debug
+      get_next_sibling = true
       
-#      # New doc
-#      docs_new.push(a_tags_href)
-      
-      #--------------------
-      # Modify 'charset' value
-      #--------------------
-      
-    end#docs.each do |doc|
-
-    # Return
-    return a_tags_href
+      # Modify
+      docs.each do |doc|
+        #--------------------
+        # Modify 'a' tags
+        #--------------------
+        
+        # Get 'a' tags
+        a_tags = doc.css("div ul li a")
+        
+        # href value
+        a_tags.each do |a_tag|
+          if a_tag['href'].start_with?("/hl?")
+            # Modify url
+            a_tag['href'] = "http://headlines.yahoo.co.jp" + a_tag['href']
+            
+            # Add
+            a_tags_href.push(a_tag)
+            
+            # #debug =================================
+            # #debug
+            
+            # REF http://nokogiri.rubyforge.org/nokogiri/Nokogiri/XML/Node.html
+            ns = a_tag.next_sibling
+#             
+            if get_next_sibling
+#               
+                # while (ns) do
+#                     
+                    # if ns.next_sibling != "写真"
+                        write_log(
+                                  "a_tag.next_sibling=" + a_tag.next_sibling,  
+                                  # "a_tag.content=" + a_tag.content,  
+                                  # __FILE__,
+                                  __FILE__.split("/")[-1],
+                                  __LINE__.to_s)
+                        # break
+#                         
+                    # end
+#                     
+                    # ns = ns.next_sibling
+                # end
+                
+                get_next_sibling = false
+                
+            end#if get_next_sibling
+                # while (ns) do
+#                   
+                    # if(ns['href'] && ns['href'].start_with?("http::"))
+#                       
+                        # write_log(
+                            # "ns.content=" + ns.content,  
+                            # # __FILE__,
+                            # __FILE__.split("/")[-1],
+                            # __LINE__.to_s)
+#                         
+                        # break
+#                       
+                    # end
+#                   
+                    # ns = ns.next_sibling
+#                   
+                # end
+#                 
+                # get_next_sibling = false
+#               
+            # end
+#             
+            # # vendor = a_tag.next_sibling.next_sibling.next_sibling
+#             
+            # # if a_tag.next_sibling != nil
+                # # vendor_list << vendor.text
+            # # end
+#             
+#             
+            # #/========================================
+            
+          end#if a_tag['href'].start_with?("/hl?")
+        end#a_tags.each do |a_tag|
+  
+        
+  #      # New doc
+  #      docs_new.push(a_tags_href)
+        
+        #----------------------
+        # Vendor list
+        # 
+        
+        
+        # a_tags.each do |a_tag|
+#           
+            # if a_tag['href'].start_with?("http://headlines.yahoo.co.jp/list")
+#               
+                # vendor_list << a_tag.text
+#               
+              # # # Modify url
+              # # a_tag['href'] = "http://headlines.yahoo.co.jp" + a_tag['href']
+  # #             
+              # # # Add
+              # # a_tags_href.push(a_tag)
+#               
+            # end#if a_tag['href'].start_with?("/hl?")
+#             
+        # end#a_tags.each do |a_tag|
+        #--------------------
+        # Modify 'charset' value
+        #--------------------
+        
+      end#docs.each do |doc|
+  
+      #debug
+      write_log(
+                  "vendor_list.size=" + vendor_list.size.to_s +
+                  "/" + "a_tags_href.size=" + a_tags_href.size.to_s,
+                  # __FILE__,
+                  __FILE__.split("/")[-1],
+                  __LINE__.to_s)
+  
+  
+      # Return
+      return a_tags_href
     
   end#def get_atags
 
