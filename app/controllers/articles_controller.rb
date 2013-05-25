@@ -371,8 +371,8 @@ class ArticlesController < ApplicationController
       
       vendor_list = []
       
-      #debug
-      get_next_sibling = true
+      # #debug
+      # get_next_sibling = true
       
       # Modify
       docs.each do |doc|
@@ -395,30 +395,30 @@ class ArticlesController < ApplicationController
             # #debug =================================
             # #debug
             
-            # REF http://nokogiri.rubyforge.org/nokogiri/Nokogiri/XML/Node.html
-            ns = a_tag.next_sibling
-#             
-            if get_next_sibling
-#               
-                # while (ns) do
-#                     
-                    # if ns.next_sibling != "写真"
-                        write_log(
-                                  "a_tag.next_sibling=" + a_tag.next_sibling,  
-                                  # "a_tag.content=" + a_tag.content,  
-                                  # __FILE__,
-                                  __FILE__.split("/")[-1],
-                                  __LINE__.to_s)
-                        # break
-#                         
-                    # end
-#                     
-                    # ns = ns.next_sibling
-                # end
-                
-                get_next_sibling = false
-                
-            end#if get_next_sibling
+            # # REF http://nokogiri.rubyforge.org/nokogiri/Nokogiri/XML/Node.html
+            # ns = a_tag.next_sibling
+# #             
+            # if get_next_sibling
+# #               
+                # # while (ns) do
+# #                     
+                    # # if ns.next_sibling != "写真"
+                        # write_log(
+                                  # "a_tag.next_sibling=" + a_tag.next_sibling,  
+                                  # # "a_tag.content=" + a_tag.content,  
+                                  # # __FILE__,
+                                  # __FILE__.split("/")[-1],
+                                  # __LINE__.to_s)
+                        # # break
+# #                         
+                    # # end
+# #                     
+                    # # ns = ns.next_sibling
+                # # end
+#                 
+                # get_next_sibling = false
+#                 
+            # end#if get_next_sibling
                 # while (ns) do
 #                   
                     # if(ns['href'] && ns['href'].start_with?("http::"))
@@ -1225,48 +1225,50 @@ class ArticlesController < ApplicationController
         
         kw = []
         
-        category = Category.find_by_name("US")
+        kw[0] = _kw_US()
         
-        if category != nil
-          
-            write_log(
-                  "category.name=" + category.name, 
-                  # __FILE__,
-                  __FILE__.split("/")[-1],
-                  __LINE__.to_s)
-
-            
-            kws = Keyword.find_all_by_category_id(category.id)
-
-            write_log(
-                  "kws.size=" + kws.size.to_s, 
-                  # __FILE__,
-                  __FILE__.split("/")[-1],
-                  __LINE__.to_s)
-
-                  
-            kw[0] = []
-            
-            # Set keywords
-            if (kws == nil) or (kws.size == 0)
-                
-                kw[0] = ["米国", "米", "アメリカ"]
-                
-            else
-              
-                kws.each do |kw|
-                  
-                  kw[0].append(kw.name)
-                  
-                end
-              
-            end
-            
-        else
-          
-          kw[0] = ["米国", "米", "アメリカ"]
-          
-        end
+        # category = Category.find_by_name("US")
+#         
+        # if category != nil
+#           
+            # write_log(
+                  # "category.name=" + category.name, 
+                  # # __FILE__,
+                  # __FILE__.split("/")[-1],
+                  # __LINE__.to_s)
+# 
+#             
+            # kws = Keyword.find_all_by_category_id(category.id)
+# 
+            # write_log(
+                  # "kws.size=" + kws.size.to_s, 
+                  # # __FILE__,
+                  # __FILE__.split("/")[-1],
+                  # __LINE__.to_s)
+# 
+#                   
+            # kw[0] = []
+#             
+            # # Set keywords
+            # if (kws == nil) or (kws.size == 0)
+#                 
+                # kw[0] = ["米国", "米", "アメリカ"]
+#                 
+            # else
+#               
+                # kws.each do |kw|
+#                   
+                  # kw[0].append(kw.name)
+#                   
+                # end
+#               
+            # end
+#             
+        # else
+#           
+          # kw[0] = ["米国", "米", "アメリカ"]
+#           
+        # end
         
         
         # @kw[0] = ["米国", "米", "アメリカ"]    
@@ -1283,7 +1285,55 @@ class ArticlesController < ApplicationController
         return kw
     
   end#def set_category_names_and_keywords_int()
-  
+
+  def _kw_US
+      category = Category.find_by_name("US")
+        
+      if category != nil
+        
+          write_log(
+                "category.name=" + category.name, 
+                # __FILE__,
+                __FILE__.split("/")[-1],
+                __LINE__.to_s)
+
+          
+          kws = Keyword.find_all_by_category_id(category.id)
+
+          write_log(
+                "kws.size=" + kws.size.to_s, 
+                # __FILE__,
+                __FILE__.split("/")[-1],
+                __LINE__.to_s)
+
+                
+          kw = []
+          
+          # Set keywords
+          if (kws == nil) or (kws.size == 0)
+              
+              kw = ["米国", "米", "アメリカ"]
+              
+          else
+            
+              kws.each do |word|
+                
+                kw.append(word.name)
+                
+              end
+            
+          end
+          
+      else
+        
+        kw = ["米国", "米", "アメリカ"]
+        
+      end#if category != nil
+      
+      return kw
+      
+  end#def _kw_US
+    
   def get_num_of_docs()
     
       if params['doc_num'] != nil

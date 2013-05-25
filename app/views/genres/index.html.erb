@@ -1,21 +1,7 @@
 <h1>Genres</h1>
 
-<table>
-  <tr>
-  	<th>Id</th>
-    <th>Name</th>
-    <th>Code</th>
-  </tr>
-
-<% @genres.each do |genre| %>
-  <tr>
-  	<td><%= genre.id %></td>
-    <td><%= link_to genre.name, genre %></td>
-    <td><%= genre.code %></td>
-  </tr>
-<% end %>
-</table>
-
+	<%= render :partial => "index_table" %>
+	
 <br />
 
 <%= link_to 'New Genre', new_genre_path %>
@@ -34,29 +20,4 @@
 
 <hr />
 
-<input type="button" value="Show log"   id="show_button" /> |
-<!--
-	REF disabled http://html.eweb-design.com/0903_btn.html
--->
-<input type="button" value="Hide log"   class="hide_button" disabled/>
-
-<div id="logs" style="display: none;">
-	<a href="#bottom">To bottom</a>
-	<br />
-
-	<% if @contentArray != nil %>
-		<% for i in 0..@contentArray.length - 1 %>
-		
-			<%= @contentArray[i] %><br />
-		
-		<% end %>
-
-	<% else %>
-		
-		<%= @content %>
-	
-	<% end %>		
-	
-	<input type="button" value="Hide log"   class="hide_button" disabled/>
-	
-</div>
+	<%= render :partial => "index_log" %>
