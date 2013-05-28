@@ -67,6 +67,8 @@ def write_log(text, file, line)
                     File.basename(f, File.extname(f)) + "_" +
                       get_time_label_now_2 + File.extname(f)].join(File::SEPARATOR)
         
+        # => REF cp: http://miyohide.hatenablog.com/entry/20050916/1126881010
+        # => REF cp: http://doc.ruby-lang.org/ja/search/module:FileUtils/query:FileUtils.%23cp/
         FileUtils.cp(fname, new_fname)
                     
                   # File.basename(f, File.extname(f)) + "_" +

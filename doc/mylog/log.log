@@ -61,3 +61,126 @@ File size=1527------------------------=[end]
 categorize_new3_soci(a_tags)----------------------
 File size=1702------------------------=[end]
 
+[begin]------------------------=
+[2013/05/25 22:04:08] [articles_controller.rb: 1368]
+
+number=3
+File size=1894------------------------=[end]
+
+[begin]------------------------=
+[2013/05/25 22:04:08] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1388]
+soci
+File size=2042------------------------=[end]
+
+[begin]------------------------=
+[2013/05/25 22:04:08] [articles_controller.rb: 39]
+genre=soci
+File size=2236------------------------=[end]
+
+[begin]------------------------=
+[2013/05/25 22:04:10] [articles_controller.rb: 492]
+vendor_list.size=0/a_tags_href.size=75
+File size=2382------------------------=[end]
+
+[begin]------------------------=
+[2013/05/25 22:04:10] [articles_controller.rb: 1585]
+
+
+categorize_new3_soci(a_tags)----------------------
+File size=2557------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 07:27:07] [articles_controller.rb: 1368]
+
+number=3
+File size=2749------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 07:27:07] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1388]
+soci
+File size=2897------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 07:27:44] [articles_controller.rb: 1368]
+
+number=3
+File size=3091------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 07:27:44] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1388]
+soci
+File size=3239------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 07:27:44] [articles_controller.rb: 39]
+genre=soci
+File size=3433------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 07:27:45] [articles_controller.rb: 492]
+vendor_list.size=0/a_tags_href.size=75
+File size=3579------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 07:27:45] [articles_controller.rb: 1585]
+
+
+categorize_new3_soci(a_tags)----------------------
+File size=3754------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 07:27:52] [articles_controller.rb: 1368]
+
+number=3
+File size=3946------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 07:27:52] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1388]
+int
+File size=4094------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 07:27:52] [articles_controller.rb: 39]
+genre=int
+File size=4287------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 07:27:52] [articles_controller.rb: 140]
+genre.name =>Overseas
+File size=4432------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 07:27:52] [articles_controller.rb: 150]
+genre != nil => Overseas
+File size=4590------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 07:27:52] [articles_controller.rb: 159]
+categories.size=1
+File size=4751------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 07:27:52] [articles_controller.rb: 204]
+category_names.size=2
+File size=4905------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 07:27:52] [articles_controller.rb: 78]
+@category_names.size=2
+File size=5063------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 07:27:52] [articles_controller.rb: 1298]
+category.name=US
+File size=5221------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 07:27:52] [articles_controller.rb: 1307]
+kws.size=0
+File size=5375------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 07:27:53] [articles_controller.rb: 492]
+vendor_list.size=0/a_tags_href.size=75
+File size=5523------------------------=[end]
+

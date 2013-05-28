@@ -30,7 +30,7 @@ class ArticlesController < ApplicationController
       # 2. Set genre
       #----------------------
       @genre = get_genre()
-      
+
       #debug
       write_log(
                 "genre=" + @genre,  
