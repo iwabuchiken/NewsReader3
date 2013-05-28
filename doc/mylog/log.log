@@ -62,125 +62,96 @@ categorize_new3_soci(a_tags)----------------------
 File size=1702------------------------=[end]
 
 [begin]------------------------=
-[2013/05/25 22:04:08] [articles_controller.rb: 1368]
-
-number=3
+[2013/05/29 07:47:03] [keywords_controller.rb: 96]
+keyword.to_s: {"name"=>"米国", "category_id"=>"1"}
 File size=1894------------------------=[end]
 
 [begin]------------------------=
-[2013/05/25 22:04:08] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1388]
+[2013/05/29 07:47:03] [keywords_controller.rb: 105]
+keywords.size: 1
+File size=2082------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 07:47:06] [articles_controller.rb: 1368]
+
+number=3
+File size=2235------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 07:47:06] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1388]
 soci
-File size=2042------------------------=[end]
+File size=2383------------------------=[end]
 
 [begin]------------------------=
-[2013/05/25 22:04:08] [articles_controller.rb: 39]
+[2013/05/29 07:47:06] [articles_controller.rb: 39]
 genre=soci
-File size=2236------------------------=[end]
+File size=2577------------------------=[end]
 
 [begin]------------------------=
-[2013/05/25 22:04:10] [articles_controller.rb: 492]
+[2013/05/29 07:47:07] [articles_controller.rb: 492]
 vendor_list.size=0/a_tags_href.size=75
-File size=2382------------------------=[end]
+File size=2723------------------------=[end]
 
 [begin]------------------------=
-[2013/05/25 22:04:10] [articles_controller.rb: 1585]
+[2013/05/29 07:47:07] [articles_controller.rb: 1585]
 
 
 categorize_new3_soci(a_tags)----------------------
-File size=2557------------------------=[end]
+File size=2898------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:27:07] [articles_controller.rb: 1368]
+[2013/05/29 07:47:11] [articles_controller.rb: 1368]
 
 number=3
-File size=2749------------------------=[end]
+File size=3090------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:27:07] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1388]
-soci
-File size=2897------------------------=[end]
-
-[begin]------------------------=
-[2013/05/29 07:27:44] [articles_controller.rb: 1368]
-
-number=3
-File size=3091------------------------=[end]
-
-[begin]------------------------=
-[2013/05/29 07:27:44] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1388]
-soci
-File size=3239------------------------=[end]
-
-[begin]------------------------=
-[2013/05/29 07:27:44] [articles_controller.rb: 39]
-genre=soci
-File size=3433------------------------=[end]
-
-[begin]------------------------=
-[2013/05/29 07:27:45] [articles_controller.rb: 492]
-vendor_list.size=0/a_tags_href.size=75
-File size=3579------------------------=[end]
-
-[begin]------------------------=
-[2013/05/29 07:27:45] [articles_controller.rb: 1585]
-
-
-categorize_new3_soci(a_tags)----------------------
-File size=3754------------------------=[end]
-
-[begin]------------------------=
-[2013/05/29 07:27:52] [articles_controller.rb: 1368]
-
-number=3
-File size=3946------------------------=[end]
-
-[begin]------------------------=
-[2013/05/29 07:27:52] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1388]
+[2013/05/29 07:47:11] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1388]
 int
-File size=4094------------------------=[end]
+File size=3238------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:27:52] [articles_controller.rb: 39]
+[2013/05/29 07:47:11] [articles_controller.rb: 39]
 genre=int
-File size=4287------------------------=[end]
+File size=3431------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:27:52] [articles_controller.rb: 140]
+[2013/05/29 07:47:11] [articles_controller.rb: 140]
 genre.name =>Overseas
-File size=4432------------------------=[end]
+File size=3576------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:27:52] [articles_controller.rb: 150]
+[2013/05/29 07:47:11] [articles_controller.rb: 150]
 genre != nil => Overseas
-File size=4590------------------------=[end]
+File size=3734------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:27:52] [articles_controller.rb: 159]
+[2013/05/29 07:47:11] [articles_controller.rb: 159]
 categories.size=1
-File size=4751------------------------=[end]
+File size=3895------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:27:52] [articles_controller.rb: 204]
+[2013/05/29 07:47:11] [articles_controller.rb: 204]
 category_names.size=2
-File size=4905------------------------=[end]
+File size=4049------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:27:52] [articles_controller.rb: 78]
+[2013/05/29 07:47:11] [articles_controller.rb: 78]
 @category_names.size=2
-File size=5063------------------------=[end]
+File size=4207------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:27:52] [articles_controller.rb: 1298]
+[2013/05/29 07:47:11] [articles_controller.rb: 1298]
 category.name=US
-File size=5221------------------------=[end]
+File size=4365------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:27:52] [articles_controller.rb: 1307]
-kws.size=0
-File size=5375------------------------=[end]
+[2013/05/29 07:47:11] [articles_controller.rb: 1307]
+kws.size=1
+File size=4519------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:27:53] [articles_controller.rb: 492]
+[2013/05/29 07:47:12] [articles_controller.rb: 492]
 vendor_list.size=0/a_tags_href.size=75
-File size=5523------------------------=[end]
+File size=4667------------------------=[end]
 
