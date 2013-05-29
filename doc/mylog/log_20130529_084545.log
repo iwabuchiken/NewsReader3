@@ -1,0 +1,657 @@
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=三菱自
+File size=0------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=トヨタ
+File size=149------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=ダイハツ
+File size=300------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=ホンダ
+File size=454------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=マツダ
+File size=605------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=ＢＭＷ
+File size=756------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=BMW
+File size=907------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=ベンツ
+File size=1052------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=ソニー
+File size=1204------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=パナソニック
+File size=1356------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=松下
+File size=1517------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=シャープ
+File size=1666------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=東芝
+File size=1821------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=三菱電
+File size=1970------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=セイコー
+File size=2122------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=ガソリン
+File size=2277------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=ソーラー
+File size=2432------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=原油
+File size=2587------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=原発
+File size=2736------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=石油
+File size=2885------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=エネルギー
+File size=3034------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=発電
+File size=3192------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=火力
+File size=3341------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=証券
+File size=3490------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=相場
+File size=3639------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=円
+File size=3788------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=日経平均
+File size=3934------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:22:30] [articles_controller.rb: 1576]
+word=ＥＵＲＩＢＯＲ
+File size=4089------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:13] [articles_controller.rb: 1368]
+
+number=3
+File size=4253------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:13] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1388]
+int
+File size=4401------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:13] [articles_controller.rb: 39]
+genre=int
+File size=4594------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:13] [articles_controller.rb: 140]
+genre.name =>Overseas
+File size=4739------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:13] [articles_controller.rb: 150]
+genre != nil => Overseas
+File size=4897------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:13] [articles_controller.rb: 159]
+categories.size=1
+File size=5058------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:13] [articles_controller.rb: 204]
+category_names.size=2
+File size=5212------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:13] [articles_controller.rb: 78]
+@category_names.size=2
+File size=5370------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:13] [articles_controller.rb: 1298]
+category.name=US
+File size=5528------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:13] [articles_controller.rb: 1307]
+kws.size=1
+File size=5682------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:14] [articles_controller.rb: 492]
+vendor_list.size=0/a_tags_href.size=75
+File size=5830------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:14] [articles_controller.rb: 1637]
+@category_names != nil
+File size=6005------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:14] [articles_controller.rb: 1674]
+cat.size => 2
+File size=6165------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:14] [articles_controller.rb: 1687]
+cat=Array/Array/
+File size=6316------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:14] [articles_controller.rb: 1706]
+word=米国
+File size=6470------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:14] [articles_controller.rb: 1706]
+word=中国
+File size=6619------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:14] [articles_controller.rb: 1706]
+word=中
+File size=6768------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:14] [articles_controller.rb: 1706]
+word=ヨーロッパ
+File size=6914------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:14] [articles_controller.rb: 1706]
+word=欧州
+File size=7072------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:14] [articles_controller.rb: 1706]
+word=欧
+File size=7221------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:14] [articles_controller.rb: 1706]
+word=ロシア
+File size=7367------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:14] [articles_controller.rb: 1706]
+word=イギリス
+File size=7519------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:14] [articles_controller.rb: 1706]
+word=フランス
+File size=7674------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:14] [articles_controller.rb: 1706]
+word=韓国
+File size=7829------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:14] [articles_controller.rb: 1706]
+word=韓
+File size=7978------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:14] [articles_controller.rb: 1706]
+word=朝鮮
+File size=8124------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:14] [articles_controller.rb: 1706]
+word=イラン
+File size=8273------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:26:14] [articles_controller.rb: 1706]
+word=シリア
+File size=8425------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:44] [articles_controller.rb: 1368]
+
+number=3
+File size=8577------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:44] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1388]
+bus_all
+File size=8725------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:44] [articles_controller.rb: 39]
+genre=bus_all
+File size=8922------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 492]
+vendor_list.size=0/a_tags_href.size=75
+File size=9071------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1507]
+@category_names != nil
+File size=9246------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1544]
+cat.size => 10
+File size=9406------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1557]
+cat=Array/Array/Array/Array/Array/Array/Array/Array/Array/Array/
+File size=9558------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=米国
+File size=9760------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=米
+File size=9909------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=アメリカ
+File size=10055------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=中国
+File size=10211------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=中
+File size=10361------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=ヨーロッパ
+File size=10508------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=欧州
+File size=10667------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=欧
+File size=10817------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=EURIBOR
+File size=10964------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=EURO
+File size=11115------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=ユーロ
+File size=11263------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=ロシア
+File size=11416------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=東欧
+File size=11569------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=ポーランド
+File size=11719------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=イギリス
+File size=11878------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=フランス
+File size=12034------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=ドイツ
+File size=12190------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=スペイン
+File size=12343------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=イタリア
+File size=12499------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=伊
+File size=12655------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=ポルトガル
+File size=12802------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=韓国
+File size=12961------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=韓
+File size=13111------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=朝鮮
+File size=13258------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=サムスン
+File size=13408------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=現代
+File size=13564------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=イラン
+File size=13714------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=シリア
+File size=13867------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=イラク
+File size=14020------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=自動車
+File size=14173------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=乗用車
+File size=14326------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=日産
+File size=14479------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=日野
+File size=14629------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=三菱自
+File size=14779------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=トヨタ
+File size=14932------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=ダイハツ
+File size=15085------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=ホンダ
+File size=15241------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=マツダ
+File size=15394------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=ＢＭＷ
+File size=15547------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=BMW
+File size=15700------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=ベンツ
+File size=15847------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=ソニー
+File size=16000------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=パナソニック
+File size=16153------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=松下
+File size=16315------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=シャープ
+File size=16465------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=東芝
+File size=16621------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=三菱電
+File size=16771------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=セイコー
+File size=16924------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=ガソリン
+File size=17080------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=ソーラー
+File size=17236------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=原油
+File size=17392------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=原発
+File size=17542------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=石油
+File size=17692------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=エネルギー
+File size=17842------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=発電
+File size=18001------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=火力
+File size=18151------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=証券
+File size=18301------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=相場
+File size=18451------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=円
+File size=18601------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=日経平均
+File size=18748------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=ＥＵＲＩＢＯＲ
+File size=18904------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=米国
+File size=19069------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=米
+File size=19219------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=アメリカ
+File size=19366------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=中国
+File size=19522------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=中
+File size=19672------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=ヨーロッパ
+File size=19819------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 08:45:45] [articles_controller.rb: 1576]
+word=欧州
+File size=19978------------------------=[end]
+

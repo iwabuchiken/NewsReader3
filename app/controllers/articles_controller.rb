@@ -70,7 +70,7 @@ class ArticlesController < ApplicationController
       if @genre == "int"
           
           @category_names = _get_category_names_int()
-          
+
           write_log(
                 "@category_names.size=" + @category_names.size.to_s,  
                 # __FILE__,
@@ -1498,9 +1498,29 @@ class ArticlesController < ApplicationController
       len = a_tags.size
       
       if @category_names != nil
+        
+          #debug
+          write_log(
+                "@category_names != nil",
+                # __FILE__,
+                __FILE__.split("/")[-1],
+                __LINE__.to_s)
+
+
+        
         divisions = @category_names.size
+        
       else
-        divisions = 2
+        
+          #debug
+          write_log(
+                "@category_names => nil",
+                # __FILE__,
+                __FILE__.split("/")[-1],
+                __LINE__.to_s)
+
+                
+          divisions = 2
       end
 
       ret = []
@@ -1516,6 +1536,28 @@ class ArticlesController < ApplicationController
         
       end
       
+      #debug
+      write_log(
+            "cat.size => " + cat.size.to_s,
+            # __FILE__,
+            __FILE__.split("/")[-1],
+            __LINE__.to_s)      
+
+      #debug
+      msg = "cat="
+      
+      for i in (0..(cat.size - 1))
+        msg += cat[i].class.to_s + "/"
+      end
+      
+      write_log(
+            msg,
+            # __FILE__,
+            __FILE__.split("/")[-1],
+            __LINE__.to_s)      
+
+      
+      
       # cat[0] = []
       # cat[1] = []
       
@@ -1526,6 +1568,12 @@ class ArticlesController < ApplicationController
         @kw.length.times do |i|
         
           @kw[i].each do |word|
+            
+            write_log(
+                "word=" + word,
+                # __FILE__,
+                __FILE__.split("/")[-1],
+                __LINE__.to_s)      
             
             if item.content.include?(word)
               
@@ -1570,6 +1618,85 @@ class ArticlesController < ApplicationController
       return ret
     
   end#def categorize_new3(a_tags)
+
+  def categorize_new3_int(a_tags)
+      #-------------------------------
+      # => Setup
+      #
+      #
+      #-------------------------------
+      category = Category.find_by_name("US")
+      
+      keywords = Keyword.where("category_id LIKE '#{category.id}'")
+      
+      objects = [[], []]
+      
+      #debug
+      if keywords != nil
+        
+          msg = "keywords.length=" + keywords.length.to_s
+          
+      else
+          
+          msg = "keywords.length => nil"
+          
+      end
+      
+      write_log(
+                msg,
+                # __FILE__,
+                __FILE__.split("/")[-1],
+                __LINE__.to_s)
+
+      #------------------------------
+      #
+      #
+      #
+      #------------------------------
+      a_tags.each do |atag|
+        
+          is_in = false # => After 'keywords.each do |kw|', if is_in remains false,
+                        # =>  that means that particular a_tag doesn't contain keyword,
+                        # =>  meaning that the a_tag goes into 'Others' category
+      
+          keywords.each do |kw|
+              
+              #debug
+              write_log(
+                    "kw=" + kw.name,
+                    # __FILE__,
+                    __FILE__.split("/")[-1], __LINE__.to_s)
+              
+              if atag.content.include?(kw.name)
+              
+                  atag.content = atag.content.gsub(
+                                            kw.name,
+                                            "<span style='color: green'>#{kw.name}</span>")
+                  
+                  objects[0].push(atag)
+                  
+                  is_in = true  # => This a_tag has a keyword in it,
+                                # =>  so this one goes into 'US' category;
+                                # =>  is_in becomes 'true'
+                  
+                  break # => Break from 'keywords.each do |kw|'; back to 'a_tags.each do |atag|'
+                
+              end#if atag.content.include?(word)
+              
+          end#keywords.each do |kw|
+          
+          if is_in != true
+            
+              objects[1].push(atag)
+            
+          end
+          
+          
+      end#a_tags.each do |atag|
+      
+      return objects
+      # return a_tags
+  end#def categorize_new3_int(a_tags)
 
   def categorize_new3_soci(a_tags)
       #==========================
@@ -1693,6 +1820,11 @@ class ArticlesController < ApplicationController
     
   end#def categorize_new3(a_tags)
   
+  #===============================
+  # return => categories
+  #
+  #
+  #===============================
   def try_3(doc_num=3, genre="soci")
     ###########################
     # Steps
@@ -1731,7 +1863,7 @@ class ArticlesController < ApplicationController
     
     if @genre == "int"
         
-      categories = categorize_new3(a_tags)
+      categories = categorize_new3_int(a_tags)
       
     elsif @genre == "bus_all"
       

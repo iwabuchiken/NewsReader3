@@ -1,157 +1,355 @@
 [begin]------------------------=
-[2013/05/25 21:49:28] [articles_controller.rb: 1585]
-
-
-categorize_new3_soci(a_tags)----------------------
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
 File size=0------------------------=[end]
 
 [begin]------------------------=
-[2013/05/25 21:52:07] [articles_controller.rb: 1368]
-
-number=3
-File size=189------------------------=[end]
-
-[begin]------------------------=
-[2013/05/25 21:52:07] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1388]
-soci
-File size=336------------------------=[end]
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=144------------------------=[end]
 
 [begin]------------------------=
-[2013/05/25 21:52:07] [articles_controller.rb: 39]
-genre=soci
-File size=529------------------------=[end]
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=290------------------------=[end]
 
 [begin]------------------------=
-[2013/05/25 21:52:08] [articles_controller.rb: 492]
-vendor_list.size=0/a_tags_href.size=75
-File size=674------------------------=[end]
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=436------------------------=[end]
 
 [begin]------------------------=
-[2013/05/25 21:52:08] [articles_controller.rb: 1585]
-
-
-categorize_new3_soci(a_tags)----------------------
-File size=848------------------------=[end]
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=582------------------------=[end]
 
 [begin]------------------------=
-[2013/05/25 21:53:14] [articles_controller.rb: 1368]
-
-number=3
-File size=1039------------------------=[end]
-
-[begin]------------------------=
-[2013/05/25 21:53:14] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1388]
-soci
-File size=1187------------------------=[end]
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=728------------------------=[end]
 
 [begin]------------------------=
-[2013/05/25 21:53:14] [articles_controller.rb: 39]
-genre=soci
-File size=1381------------------------=[end]
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=874------------------------=[end]
 
 [begin]------------------------=
-[2013/05/25 21:53:15] [articles_controller.rb: 492]
-vendor_list.size=0/a_tags_href.size=75
-File size=1527------------------------=[end]
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=1020------------------------=[end]
 
 [begin]------------------------=
-[2013/05/25 21:53:15] [articles_controller.rb: 1585]
-
-
-categorize_new3_soci(a_tags)----------------------
-File size=1702------------------------=[end]
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=1167------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:47:03] [keywords_controller.rb: 96]
-keyword.to_s: {"name"=>"米国", "category_id"=>"1"}
-File size=1894------------------------=[end]
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=1314------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:47:03] [keywords_controller.rb: 105]
-keywords.size: 1
-File size=2082------------------------=[end]
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=1461------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:47:06] [articles_controller.rb: 1368]
-
-number=3
-File size=2235------------------------=[end]
-
-[begin]------------------------=
-[2013/05/29 07:47:06] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1388]
-soci
-File size=2383------------------------=[end]
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=1608------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:47:06] [articles_controller.rb: 39]
-genre=soci
-File size=2577------------------------=[end]
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=1755------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:47:07] [articles_controller.rb: 492]
-vendor_list.size=0/a_tags_href.size=75
-File size=2723------------------------=[end]
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=1902------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:47:07] [articles_controller.rb: 1585]
-
-
-categorize_new3_soci(a_tags)----------------------
-File size=2898------------------------=[end]
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=2049------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:47:11] [articles_controller.rb: 1368]
-
-number=3
-File size=3090------------------------=[end]
-
-[begin]------------------------=
-[2013/05/29 07:47:11] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1388]
-int
-File size=3238------------------------=[end]
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=2196------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:47:11] [articles_controller.rb: 39]
-genre=int
-File size=3431------------------------=[end]
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=2343------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:47:11] [articles_controller.rb: 140]
-genre.name =>Overseas
-File size=3576------------------------=[end]
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=2490------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:47:11] [articles_controller.rb: 150]
-genre != nil => Overseas
-File size=3734------------------------=[end]
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=2637------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:47:11] [articles_controller.rb: 159]
-categories.size=1
-File size=3895------------------------=[end]
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=2784------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:47:11] [articles_controller.rb: 204]
-category_names.size=2
-File size=4049------------------------=[end]
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=2931------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:47:11] [articles_controller.rb: 78]
-@category_names.size=2
-File size=4207------------------------=[end]
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=3078------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:47:11] [articles_controller.rb: 1298]
-category.name=US
-File size=4365------------------------=[end]
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=3225------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:47:11] [articles_controller.rb: 1307]
-kws.size=1
-File size=4519------------------------=[end]
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=3372------------------------=[end]
 
 [begin]------------------------=
-[2013/05/29 07:47:12] [articles_controller.rb: 492]
-vendor_list.size=0/a_tags_href.size=75
-File size=4667------------------------=[end]
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=3519------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=3666------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=3813------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=3960------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=4107------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=4254------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=4401------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=4548------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=4695------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=4842------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=4989------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=5136------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=5283------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=5430------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=5577------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=5724------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=5871------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=6018------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=6165------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=6312------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=6459------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=6606------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=6753------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=6900------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=7047------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=7194------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=7341------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=7488------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=7635------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=7782------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=7929------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=8076------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=8223------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=8370------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=8517------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=8664------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=8811------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=8958------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=9105------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=9252------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=9399------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=9546------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=9693------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=9840------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=9987------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=10134------------------------=[end]
+
+[begin]------------------------=
+[2013/05/29 09:13:56] [articles_controller.rb: 1668]
+kw=米国
+File size=10282------------------------=[end]
 

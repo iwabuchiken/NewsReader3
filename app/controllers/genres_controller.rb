@@ -7,7 +7,8 @@ class GenresController < ApplicationController
   def index
     @genres = Genre.all
 
-    target = "log.log"
+    target = "doc/mylog/log.log"
+    # target = "log.log"
     
     # @content = "111111111"
     @content = ""
