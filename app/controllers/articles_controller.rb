@@ -1627,7 +1627,8 @@ class ArticlesController < ApplicationController
       #-------------------------------
       category = Category.find_by_name("US")
       
-      keywords = Keyword.where("category_id LIKE '#{category.id}'")
+      # keywords = Keyword.where("category_id LIKE '#{category.id}'")
+      keywords = Keyword.find(:all, :conditions => ["category_id = #{category.id}"])
       
       objects = [[], []]
       
