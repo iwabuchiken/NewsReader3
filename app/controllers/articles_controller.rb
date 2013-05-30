@@ -1630,7 +1630,8 @@ class ArticlesController < ApplicationController
       
       # category = Category.find(:all, :conditions => [
       category = Category.find(:first, :conditions => [
-                              "name LIKE ? AND genre_id LIKE ?",
+                              "name LIKE ? AND genre_id == ?",
+                              # "name LIKE ? AND genre_id LIKE ?",
                               "US", "#{genre.id}"])
       
       #debug
@@ -1658,7 +1659,8 @@ class ArticlesController < ApplicationController
       keywords = Keyword.find(
                       :all,
                       :conditions => [
-                              "category_id LIKE ?", "#{category.id}"])
+                              "category_id == ?", "#{category.id}"])
+                              # "category_id LIKE ?", "#{category.id}"])
       
       objects = [[], []]
       
