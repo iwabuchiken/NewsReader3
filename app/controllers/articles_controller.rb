@@ -1625,29 +1625,59 @@ class ArticlesController < ApplicationController
       #
       #
       #-------------------------------
-      category = Category.find_by_name("US")
+      # category = Category.find_by_name("US")
+      genre = Genre.find_by_name("Overseas")
       
-      # keywords = Keyword.where("category_id LIKE '#{category.id}'")
-      keywords = Keyword.find(:all, :conditions => ["category_id = #{category.id}"])
-      
-      objects = [[], []]
+      # category = Category.find(:all, :conditions => [
+      category = Category.find(:first, :conditions => [
+                              "name LIKE ? AND genre_id LIKE ?",
+                              "US", "#{genre.id}"])
       
       #debug
-      if keywords != nil
+      if category
         
-          msg = "keywords.length=" + keywords.length.to_s
-          
+          write_log(
+                    "category.id.to_s=" + category.id.to_s,  
+                    # __FILE__,
+                    __FILE__.split("/")[-1],
+                    __LINE__.to_s)
+
+
       else
-          
-          msg = "keywords.length => nil"
-          
-      end
-      
-      write_log(
-                msg,
+        
+          write_log(
+                "category => nil",
                 # __FILE__,
                 __FILE__.split("/")[-1],
                 __LINE__.to_s)
+
+      end
+      
+      # keywords = Keyword.where("category_id LIKE '#{category.id}'")
+      # keywords = Keyword.find(:all, :conditions => ["category_id = #{category.id}"])
+      keywords = Keyword.find(
+                      :all,
+                      :conditions => [
+                              "category_id LIKE ?", "#{category.id}"])
+      
+      objects = [[], []]
+      
+      # #debug
+      # if keywords != nil
+#         
+          # msg = "keywords.length=" + keywords.length.to_s
+#           
+      # else
+#           
+          # msg = "keywords.length => nil"
+#           
+      # end
+#       
+      # write_log(
+                # msg,
+                # # __FILE__,
+                # __FILE__.split("/")[-1],
+                # __LINE__.to_s)
 
       #------------------------------
       #
@@ -1662,11 +1692,11 @@ class ArticlesController < ApplicationController
       
           keywords.each do |kw|
               
-              #debug
-              write_log(
-                    "kw=" + kw.name,
-                    # __FILE__,
-                    __FILE__.split("/")[-1], __LINE__.to_s)
+              # #debug
+              # write_log(
+                    # "kw=" + kw.name,
+                    # # __FILE__,
+                    # __FILE__.split("/")[-1], __LINE__.to_s)
               
               if atag.content.include?(kw.name)
               

@@ -4,6 +4,7 @@
   <tr>
     <th>Name</th>
     <th>Category</th>
+    <th>Genre</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,6 +18,19 @@
     	
     		<%= keyword.category.name %>
     		<%= "(#{keyword.category.id})" %>
+    		
+		<% else %>
+		
+			No data
+		
+		<% end %>
+	</td>
+    
+    <td>
+    	<% if keyword.genre != nil %>
+    	
+    		<%= keyword.genre.name %>
+    		<%= "(#{keyword.genre.id})" %>
     		
 		<% else %>
 		
