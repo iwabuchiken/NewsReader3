@@ -160,6 +160,9 @@ heroku run rake db:migrate
 g p origin master && g p heroku master
 
 
+[Add column: genre_id to Keyword 2013/05/30 19:00:45]-------------------------------
+rails generate migration AddColumnGenreIdToKeyword
+
 aa
 ==================== STORAGE ===================================
 [Add column: Article 20120711_065652]-------------------------------

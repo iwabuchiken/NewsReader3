@@ -20,7 +20,9 @@ end#def get_time_label_now()
 def write_log(text, file, line)
     
     # max_line_num = 300
-    max_line_num = 20000
+    # max_line_num = 20000
+    max_line_num = 40000
+    
     #-----------------------
     # => File exists?
     #-----------------------
