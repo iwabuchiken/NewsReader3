@@ -168,6 +168,11 @@ g p origin master && g p heroku master
 g p origin master && g p heroku master && heroku run rake db:migrate
 
 
+bundle exec rake db:migrate
+
+heroku run rake db:migrate
+
+
 aa
 ==================== STORAGE ===================================
 [Add column: Article 20120711_065652]-------------------------------
