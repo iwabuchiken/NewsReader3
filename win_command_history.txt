@@ -157,11 +157,16 @@ heroku run rake db:migrate
 	2013-05-11T10:44:25.309540+00:00 app[web.1]:   app/controllers/articles_controll
 	er.rb:1247:in `each'
 
-g p origin master && g p heroku master
+g p origin master && g p heroku master 
 
 
 [Add column: genre_id to Keyword 2013/05/30 19:00:45]-------------------------------
-rails generate migration AddColumnGenreIdToKeyword
+#rails generate migration AddColumnGenreIdToKeyword
+
+#bundle exec rake db:migrate
+
+g p origin master && g p heroku master && heroku run rake db:migrate
+
 
 aa
 ==================== STORAGE ===================================
