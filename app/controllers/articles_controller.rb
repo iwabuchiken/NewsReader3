@@ -1630,7 +1630,8 @@ class ArticlesController < ApplicationController
       
       # category = Category.find(:all, :conditions => [
       category = Category.find(:first, :conditions => [
-                              "name LIKE ? AND genre_id == ?",
+                              "name LIKE ? AND genre_id = ?",
+                              # "name LIKE ? AND genre_id == ?",
                               # "name LIKE ? AND genre_id LIKE ?",
                               "US", "#{genre.id}"])
       
@@ -1659,7 +1660,9 @@ class ArticlesController < ApplicationController
       keywords = Keyword.find(
                       :all,
                       :conditions => [
-                              "category_id == ?", "#{category.id}"])
+                              #HINT '=': http://www.network-theory.co.uk/docs/postgresql/vol1/TheWHEREClause.html "FROM a, b WHERE a.id = b.id AND b.val > 5"
+                              "category_id = ?", "#{category.id}"])
+                              # "category_id == ?", "#{category.id}"])
                               # "category_id LIKE ?", "#{category.id}"])
       
       objects = [[], []]

@@ -1,0 +1,32 @@
+<% @keywords.each do |keyword| %>
+  <tr>
+    <td><%= link_to keyword.name, keyword %></td>
+    <td>
+    	<% if keyword.category != nil %>
+    	
+    		<%= keyword.category.name %>
+    		<%= "(#{keyword.category.id})" %>
+    		
+		<% else %>
+		
+			No data
+		
+		<% end %>
+	</td>
+    
+    <td>
+    	<%# if keyword.genre != nil %>
+    	<% if keyword.category != nil && keyword.category.genre != nil %>
+    	
+    		<%= keyword.category.genre.name %>
+    		<%= "(#{keyword.category.genre.id})" %>
+    		
+		<% else %>
+		
+			No data
+		
+		<% end %>
+	</td>
+    
+  </tr>
+<% end %>
