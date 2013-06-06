@@ -1172,3 +1172,92 @@ File size=34519------------------------=[end]
 category.id.to_s=1
 File size=34695------------------------=[end]
 
+[begin]------------------------=
+[2013/06/06 17:58:56] [articles_controller.rb: 1368]
+
+number=3
+File size=34852------------------------=[end]
+
+[begin]------------------------=
+[2013/06/06 17:58:56] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1394]
+soci
+File size=35001------------------------=[end]
+
+[begin]------------------------=
+[2013/06/06 17:58:56] [articles_controller.rb: 39]
+genre=soci
+File size=35196------------------------=[end]
+
+[begin]------------------------=
+[2013/06/06 17:58:57] [articles_controller.rb: 492]
+vendor_list.size=0/a_tags_href.size=75
+File size=35343------------------------=[end]
+
+[begin]------------------------=
+[2013/06/06 17:58:57] [articles_controller.rb: 1748]
+
+
+categorize_new3_soci(a_tags)----------------------
+File size=35519------------------------=[end]
+
+[begin]------------------------=
+[2013/06/06 17:59:09] [articles_controller.rb: 1368]
+
+number=3
+File size=35712------------------------=[end]
+
+[begin]------------------------=
+[2013/06/06 17:59:09] [C:/WORKS/WS/WS_Android~/NewsReader3/app/controllers/articles_controller.rb: 1388]
+int
+File size=35861------------------------=[end]
+
+[begin]------------------------=
+[2013/06/06 17:59:09] [articles_controller.rb: 39]
+genre=int
+File size=36055------------------------=[end]
+
+[begin]------------------------=
+[2013/06/06 17:59:09] [articles_controller.rb: 140]
+genre.name =>Overseas
+File size=36201------------------------=[end]
+
+[begin]------------------------=
+[2013/06/06 17:59:09] [articles_controller.rb: 150]
+genre != nil => Overseas
+File size=36360------------------------=[end]
+
+[begin]------------------------=
+[2013/06/06 17:59:09] [articles_controller.rb: 159]
+categories.size=1
+File size=36522------------------------=[end]
+
+[begin]------------------------=
+[2013/06/06 17:59:09] [articles_controller.rb: 204]
+category_names.size=2
+File size=36677------------------------=[end]
+
+[begin]------------------------=
+[2013/06/06 17:59:09] [articles_controller.rb: 78]
+@category_names.size=2
+File size=36836------------------------=[end]
+
+[begin]------------------------=
+[2013/06/06 17:59:09] [articles_controller.rb: 1298]
+category.name=US
+File size=36995------------------------=[end]
+
+[begin]------------------------=
+[2013/06/06 17:59:09] [articles_controller.rb: 1307]
+kws.size=2
+File size=37150------------------------=[end]
+
+[begin]------------------------=
+[2013/06/06 17:59:10] [articles_controller.rb: 492]
+vendor_list.size=0/a_tags_href.size=75
+File size=37299------------------------=[end]
+
+[begin]------------------------=
+[2013/06/06 17:59:10] [articles_controller.rb: 1645]
+category.id.to_s=1
+File size=37475------------------------=[end]
+

@@ -1660,6 +1660,7 @@ class ArticlesController < ApplicationController
       keywords = Keyword.find(
                       :all,
                       :conditions => [
+                              #HINT '=': http://www.network-theory.co.uk/docs/postgresql/vol1/TheWHEREClause.html "FROM a, b WHERE a.id = b.id AND b.val > 5"
                               "category_id = ?", "#{category.id}"])
                               # "category_id == ?", "#{category.id}"])
                               # "category_id LIKE ?", "#{category.id}"])

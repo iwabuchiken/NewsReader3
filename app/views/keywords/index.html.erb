@@ -1,46 +1,11 @@
 <h1>Keywords</h1>
 
 <table>
-  <tr>
-    <th>Name</th>
-    <th>Category</th>
-    <th>Genre</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+	
+	<%= render "index_header" %>
 
-<% @keywords.each do |keyword| %>
-  <tr>
-    <td><%= link_to keyword.name, keyword %></td>
-    <td>
-    	<% if keyword.category != nil %>
-    	
-    		<%= keyword.category.name %>
-    		<%= "(#{keyword.category.id})" %>
-    		
-		<% else %>
-		
-			No data
-		
-		<% end %>
-	</td>
-    
-    <td>
-    	<% if keyword.genre != nil %>
-    	
-    		<%= keyword.genre.name %>
-    		<%= "(#{keyword.genre.id})" %>
-    		
-		<% else %>
-		
-			No data
-		
-		<% end %>
-	</td>
-    
-  </tr>
-<% end %>
+	<%= render "index_entries" %>
+
 </table>
 
 <br />
