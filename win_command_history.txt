@@ -166,6 +166,7 @@ g p origin master && g p heroku master
 #bundle exec rake db:migrate
 
 g p origin master && g p heroku master && heroku run rake db:migrate
+g p origin master && g p heroku master
 
 
 bundle exec rake db:migrate
